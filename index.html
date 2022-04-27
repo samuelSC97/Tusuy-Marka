@@ -41,16 +41,16 @@
                     <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Director</a>
+                    <a class="nav-link" href="#navDirector">Director</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Repertorio</a>
+                    <a class="nav-link" href="#navRepertorio">Repertorio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tienda</a>
+                    <a class="nav-link" href="#navTienda">Tienda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contactos</a>
+                    <a class="nav-link" href="#navContactos">Contactos</a>
                 </li>
             </ul>
         </nav>
@@ -64,11 +64,8 @@
     <!-- INICIO -->
     <section>
 
-
-
-
         <!-- CAROUSEL -->
-        <div id="carouselExampleIndicators" class="carousel slide container-fluid" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide container-fluid px-3" data-bs-ride="carousel">
             <!-- Barras inferiores navegador -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -79,13 +76,13 @@
 
             <!-- Carousel images -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active img-fluid">
                     <img src="imagenes/carousel/carousel-1.jpg" class="d-block w-100" alt="Imagen carousel 1">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item img-fluid">
                     <img src="imagenes/carousel/carousel-2.jpg" class="d-block w-100" alt="Imagen carouse 2">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item img-fluid">
                     <img src="imagenes/carousel/carousel-3.jpg" class="d-block w-100" alt="imagen carousel 2">
                 </div>
             </div>
@@ -109,7 +106,7 @@
         <!-- FIN CAROUSEL -->
 
         <!-- PRESENTACION -->
-        <article>
+        <article class="container">
             <h2>Presentacion</h2>
             <p>La creacion de la agrupacion Tusuy Marka dio inicio un 25 de Septiembre del 2021 con solo 12 intengrantes. El profesor Jorge Luis Cueva Astulle le dio nombre a la agrupacion, donde Tusuy significa "danzante" y Marca "pueblo", que juntandolas diria "pueblo danzante".
             <br><br>
@@ -123,12 +120,12 @@
 
 
     <!-- DIRECTOR -->
-    <section>
-        <h2>Director</h2>
-        <div>
-            <img src="" alt="Jorge Luis Cueva Astulle">
+    <section id="navDirector" class="container">
+        <h2 class="text-center">Director</h2>
+        <div class="text-center">
+            <img class="rounded-circle img-fluid" src="imagenes/director/jorge-luis-cueva-astulle.jpg" alt="Jorge Luis Cueva Astulle">
         </div>
-        <article>
+        <article class="text-center">
             <h3>Jorge Luis Cueva Astulle</h3>
             <p>Bailarín, coreógrafo y director de la Agrupación Tusuy Marka, en Puerto Maldonado desde el año 2018 y en Arequipa desde el año 2021 </p>
         </article>
@@ -138,7 +135,7 @@
 
 
     <!-- REPERTORIO -->
-    <section>
+    <section id="navRepertorio" class="container">
         <article>
             <h2>Repertorio</h2>
             <p>La Agrupación Tusuy Marka hasta la fecha tiene 15 propuestas coreográficas en danza folclórica y baile moderno manifestación artística que nos brinda la posibilidad de expresar mediante la realización de diferentes movimientos corporales las distintas tradiciones y/o costumbres de nuestros pueblos a través de su práctica. Proporcionando a todo ser humano un enriquecimiento cultural y un sentido de pertenencia con nuestras raíces andinas folclóricas y ritmos de bailes modernos, La danza tiene como finalidad el mantener viva la esencia de los pueblos, además tiene sus parámetros artísticos ya establecidos que identifica a cada una de las propuestas artísticas.
@@ -147,68 +144,68 @@
         </article>
         
         <!-- Navegacion de danzas -->
-        <ul>
-            <li>
-                <a href="">Todos</a>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Todos</a>
             </li>
-            <li>
-                <a href="">Apurimac</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Apurimac</a>
             </li>
-            <li>
-                <a href="">Puno</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Puno</a>
             </li>
-            <li>
-                <a href="">Trujillo</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Trujillo</a>
             </li>
         </ul>
         <!-- FIN Navegacion de danzas -->
 
         <!-- Imagenes departamentos -->
-        <div>
-            <div>
-                <img src="" alt="Danzas autoctonas de Apurimac">
+        <div class="d-flex container w-75">
+            <div class="col-4">
+                <img class="img-fluid" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Apurimac">
                 <h3>Danzas autoctonas de Apurimac</h3>
             </div>
-            <div>
-                <img src="" alt="Danzas autoctonas de Puno">
+            <div class="col-4">
+                <img class="img-fluid" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Puno">
                 <h3>Danzas autoctonas de Puno</h3>
             </div>
-            <div>
-                <img src="" alt="Danzas autoctonas de Trujillo">
+            <div class="col-4">
+                <img class="img-fluid" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Trujillo">
                 <h3>Danzas autoctonas de Trujillo</h3>
             </div>
         </div>
         <!-- FIN Imagenes departamentos -->
 
         <!-- Apurimac -->
-        <div>
-            <img src="" alt="Danzas autoctonas de Apurimac">
-            <article>
+        <div class="row">
+            <img class="img-fluid col-sm-12 col-md-4" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Apurimac">
+            <article class="col-sm-12 col-md-8">
                 <h3>Danzas autoctonas de Apurimac</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim, distinctio officiis earum quos vel nisi unde exercitationem officia velit hic error maxime cum, ea consequuntur pariatur at nesciunt aliquid!
-                Alias architecto iusto laboriosam reprehenderit voluptatum. Quam, tempore laudantium! Assumenda dignissimos repellendus neque odit omnis, culpa quia ab quae quas enim reiciendis unde deserunt ipsa rem eos. Assumenda, adipisci mollitia.</p>
+                Alias architecto iusto laboriosam reprehenderit voluptatum. Quam, tempore laudantium! Assumenda dignissimos repellendus neque odit omnis, culpa quia ab quae quas enim reiciendis unde deserunt ipsa rem eos. Assumenda, adipisci mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis repudiandae minima non cupiditate aspernatur quos ab! Consequatur, dolore dignissimos ratione neque nihil in vitae harum repudiandae eos officia ipsam? Quisquam.</p>
             </article>
         </div>
         <!-- FIN Apurimac -->
 
         <!-- Puno -->
-        <div>
-            <img src="" alt="Danzas autoctonas de Puno">
-            <article>
+        <div class="row">
+            <img class="img-fluid col-sm-12 col-md-4" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Puno">
+            <article class="col-sm-12 col-md-8">
                 <h3>Danzas autoctonas de Puno</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fuga adipisci pariatur rerum maxime nulla quos, facere cum consequuntur repudiandae culpa sint dolores aut doloribus veritatis iure molestiae asperiores eos.
-                Sunt accusamus praesentium facilis beatae amet pariatur reiciendis recusandae, eius fugiat voluptas deleniti doloribus ab optio dignissimos sint sequi at culpa ducimus deserunt quis! Consectetur expedita asperiores harum reprehenderit facere.</p>
+                Sunt accusamus praesentium facilis beatae amet pariatur reiciendis recusandae, eius fugiat voluptas deleniti doloribus ab optio dignissimos sint sequi at culpa ducimus deserunt quis! Consectetur expedita asperiores harum reprehenderit facere. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab aliquid neque ratione ullam, tenetur voluptate recusandae suscipit dicta vitae in, veritatis, quisquam consequatur adipisci non similique sunt magnam quia fugiat.</p>
             </article>
         </div>
         <!-- FIN Puno -->
 
         <!-- Trujillo -->
-        <div>
-            <img src="" alt="Danzas autoctonas de Trujillo">
-            <article>
+        <div class="row">
+            <img class="img-fluid col-sm-12 col-md-4" src="imagenes/repertorio/apurimac.jpg" alt="Danzas autoctonas de Trujillo">
+            <article class="col-sm-12 col-md-8">
                 <h3>Danzas autoctonas de Trujillo</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit quae, optio consequuntur explicabo necessitatibus, nam id laudantium exercitationem esse est illo iure totam incidunt qui nemo tempore quaerat aut!
-                Vero error, recusandae sunt hic distinctio minima adipisci delectus quidem earum eius fuga temporibus veniam molestias explicabo atque quibusdam a incidunt, consectetur repellat deserunt! Quasi non aliquam ea sequi vero?</p>
+                Vero error, recusandae sunt hic distinctio minima adipisci delectus quidem earum eius fuga temporibus veniam molestias explicabo atque quibusdam a incidunt, consectetur repellat deserunt! Quasi non aliquam ea sequi vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quae, earum cumque qui ex, nihil veniam consequuntur nostrum sint expedita numquam voluptatum. Quam vel commodi eos atque, dignissimos aut nisi.</p>
             </article>
         </div>
         <!-- FIN Trujillo -->
@@ -219,7 +216,7 @@
 
 
     <!-- TIENDA -->
-    <section>
+    <section id="navTienda" class="container">
         <article>
             <h2>Tienda</h2>
             <p>Si lo que esta buscando es alquilar o comprar accesorios para danza, tambien le ofrecemos esa posibilidad.
@@ -260,7 +257,7 @@
 
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="navContactos" class="container-fluid">
 
         <!-- Dejanos un comentario -->
         <section>
