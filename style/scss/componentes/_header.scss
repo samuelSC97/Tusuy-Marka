@@ -1,25 +1,26 @@
+@import '../base/variables';
 @import '../base/typography';
 
 .navbar-color {
-    background-color: #fefcec;
+    background-color: $bc-nav;
     .navbar-color__nav {
         .nav-item {
             a {
                 font-size: 150%;
                 font-family: 'Shadows Into Light', cursive;
-                color: black;
+                color: $c-nav;
                 padding: 0 20px;
-                transition: all .8s;
+                transition: $nav-transition;
                 i {
                     padding-right: 5px;
                 }
                 &:hover {
                     transform: scale(1.1);
-                    transition: all .8s;
-                    color: #12889c;
+                    transition: $nav-transition;
+                    color: $c-logo-celeste;
                     i {
-                        transition: all .8s;
-                        color: #a00363;
+                        transition: $nav-transition;
+                        color: $c-logo-morado;
                     }
                 }
             }
