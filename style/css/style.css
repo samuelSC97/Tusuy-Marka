@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar-color {
   background-color: #fefcec;
 }
@@ -26,6 +31,10 @@ h1 {
   font-family: "Parisienne", cursive;
   font-size: px;
   font-weight: 700;
+  background: linear-gradient(to right, #a00363, #12889c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer {

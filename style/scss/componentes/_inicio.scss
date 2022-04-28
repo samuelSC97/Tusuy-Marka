@@ -2,4 +2,8 @@ h1 {
     font-family: 'Parisienne', cursive;
     font-size: px;
     font-weight: 700;
+    background: linear-gradient(to right, $c-logo-morado, $c-logo-celeste);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
