@@ -1,7 +1,7 @@
 @import '../base/typography';
 
 .navbar-color {
-    background-color: white;
+    background-color: #fefcec;
     .navbar-color__nav {
         .nav-item {
             a {
@@ -10,29 +10,21 @@
                 color: black;
                 padding: 0 20px;
                 transition: all .8s;
-
+                i {
+                    padding-right: 5px;
+                }
                 &:hover {
                     transform: scale(1.1);
                     transition: all .8s;
                     color: #12889c;
-                    
                     i {
                         transition: all .8s;
                         color: #a00363;
                     }
                 }
-        
-
-
-
-
-                
-                i {
-                    padding-right: 5px;
-                }
             }
         }
     }
-    
-
 }
+
+// Pruebas de navegador-responsive en otra carpeta
