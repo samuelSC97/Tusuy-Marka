@@ -1,18 +1,37 @@
-/*      PIE DE PAGINA      */
-/*      PIE DE PAGINA      */
-/*      PIE DE PAGINA      */
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+.navbar-color {
+  background-color: white;
+}
+.navbar-color .navbar-color__nav .nav-item a {
+  font-size: 150%;
+  font-family: "Shadows Into Light", cursive;
+  color: black;
+  padding: 0 20px;
+  transition: all 0.8s;
+}
+.navbar-color .navbar-color__nav .nav-item a:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+  color: #12889c;
+}
+.navbar-color .navbar-color__nav .nav-item a:hover i {
+  transition: all 0.8s;
+  color: #a00363;
+}
+.navbar-color .navbar-color__nav .nav-item a i {
+  padding-right: 5px;
+}
+
 .footer {
-  padding: 20px 0;
+  padding: 5px 0;
   background-color: #fff5ee;
   color: #4b4c4d;
 }
-
 .footer .social {
   text-align: center;
   padding-bottom: 0 px;
 }
-
-.footer .social > a {
+.footer .social a {
   font-size: 24px;
   width: 40px;
   height: 40px;
@@ -25,11 +44,9 @@
   color: inherit;
   opacity: 0.75;
 }
-
-.footer .social > a:hover {
+.footer .social a:hover {
   opacity: 0.9;
 }
-
 .footer .copyright {
   margin-top: 15px;
   text-align: center;
@@ -37,9 +54,5 @@
   color: #aaa;
   margin-bottom: 0;
 }
-
-/*      FIN PIE DE PAGINA      */
-/*      FIN PIE DE PAGINA      */
-/*      FIN PIE DE PAGINA      */
 
 /*# sourceMappingURL=style.css.map */
