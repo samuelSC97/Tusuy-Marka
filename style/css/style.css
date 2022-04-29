@@ -29,12 +29,17 @@
 
 h1 {
   font-family: "Parisienne", cursive;
-  font-size: px;
   font-weight: 700;
   background: linear-gradient(to right, #a00363, #12889c);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+#navDirector {
+  position: relative;
+  bottom: 78px;
 }
 
 .footer {

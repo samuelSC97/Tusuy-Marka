@@ -17,10 +17,10 @@
                 &:hover {
                     transform: scale(1.1);
                     transition: $nav-transition;
-                    color: $c-logo-celeste;
+                    color: map-get($c-logo, "celeste");
                     i {
                         transition: $nav-transition;
-                        color: $c-logo-morado;
+                        color: map-get($c-logo, "morado" );
                     }
                 }
             }

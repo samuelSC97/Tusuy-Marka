@@ -1,6 +1,16 @@
-$c-logo-morado: #a00363;
-$c-logo-celeste: #12889c;
+// 
+$c-logo: (morado: #a00363, celeste: #12889c);
+
+
+
 $c-nav: #000;
+
+// bc-> backgroundcolor
 $bc-nav: #fefcec;
 
+// tiempo transicion nav
 $nav-transition: all .8s;
+
+// h-> height
+$h-nav: 78px;
+

@@ -1,0 +1,5 @@
+@mixin colores ($bc-footer, $c-footer){
+    background-color: $bc-footer;
+    color: $c-footer;
+}
+// MIXINS incluido al footer

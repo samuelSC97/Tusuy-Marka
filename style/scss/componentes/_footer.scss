@@ -1,7 +1,8 @@
 .footer {
     padding:5px 0;
-    background-color:#fff5ee;
-    color:#4b4c4d;
+
+    // MIXINS
+    @include colores (#fff5ee, #4b4c4d);
 
     .social {
         text-align:center;
