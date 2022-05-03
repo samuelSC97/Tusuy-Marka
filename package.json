@@ -295,5 +295,14 @@
     "uri-js": "^4.4.1",
     "semver": "^7.3.7"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelSC97/SASS-II-SEO.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/samuelSC97/SASS-II-SEO/issues"
+  },
+  "homepage": "https://github.com/samuelSC97/SASS-II-SEO#readme",
   "description": ""
 }
