@@ -16,12 +16,14 @@
     position: relative;
     margin: 20px 12px;
     font-family: 'Shadows Into Light';
-    transition: all 000ms;
+
     border-radius: 20px;
     padding: 20px 0 20px 0;
 
+    transition: all .3s;
+    
     &:hover{
-        box-shadow: 1px 1px 0px -10px #20202049;
+        box-shadow: 1px 1px 20px 20px #20202049;
 
         /* cuando pase el mouse, info va a hacer algo... */
         .rep-card__info {
@@ -47,11 +49,7 @@
     background-color: #eff3f5;
     padding: 10px;
     /* para poder centrarlo */
-    display: flex;
-    /* horizontalmente */
-    justify-content: center;
-    /* verticalmente */
-    align-items: center;
+    @extend %flex-center-wrap;
     position: relative;
     z-index: 1;
     transition: all 300ms cubic-bezier(0.5,0,0,1);
