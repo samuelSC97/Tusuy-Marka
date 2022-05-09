@@ -1,31 +1,80 @@
-@import '../base/variables';
-@import '../base/typography';
+.navbar-header {
 
-.navbar-color {
-    background-color: $bc-nav;
+    .navbar {
+        // COLOR FONDO
+        background: 
+            radial-gradient(circle at 4% 50%,
+                lighten($c-amarillo, 32%) 5%,
+                lighten($c-morado, 60%) 55%,
+                lighten($c-celeste, 55%)
+            );
+    }
+    
     .navbar-color__nav {
         .nav-item {
             a {
+                // LETRAS NAVEGADOR
                 font-size: 150%;
                 font-family: 'Shadows Into Light', cursive;
                 color: $c-nav;
                 padding: 0 20px;
                 transition: $nav-transition;
+
+                
                 i {
+                    // ICO
                     padding-right: 5px;
+                    transition: $nav-transition;
+
                 }
                 &:hover {
+                    // LETRAS:HOVER
                     transform: scale(1.1);
                     transition: $nav-transition;
                     color: map-get($c-logo, "celeste");
                     i {
+                        // ICO:HOVER
                         transition: $nav-transition;
                         color: map-get($c-logo, "morado" );
                     }
                 }
+
+                &::after {
+                    // SUBRAYADO NAV
+                    position: absolute;
+                    content: "";
+                    width: 0%;
+                    height: 1px;
+                    background: 
+                        linear-gradient(to right,
+                            $c-morado 10%,
+                            $c-celeste)
+                        ;
+                    left: 50%;
+                    bottom: 0px;
+                    transition: all 0.4s ease-in-out;
+                }      
+            }
+
+            &:hover ::after {
+                // SUBRAYADO UBICACION
+                width: 80%;
+                left: 10%;
             }
         }
     }
 }
 
-// Pruebas de navegador-responsive en otra carpeta
+
+.separacion-header {
+    // Borde inferior nav
+    height: 3px;
+    background: 
+        radial-gradient(circle at 4% 50%,
+            $c-amarillo 5%,
+            $c-morado 55%,
+            $c-celeste)
+        ;
+    position: sticky;
+    border-radius: 0% -50% 0% 0%;
+}

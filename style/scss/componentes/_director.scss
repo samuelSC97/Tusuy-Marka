@@ -1,39 +1,54 @@
-
-
-
-
 #navDirector {
+    // ID
     position: relative;
-    bottom: 88px;
+    bottom: 90px;
 }
+
+
+
 .director {
     @extend %flex-center-wrap;
     min-height: 50vh;
 
     .director-title {
+        // TITULO "DIRECTOR"
+        font-family: 'Patrick Hand', cursive;
+        font-weight: 900;
+        background: 
+        radial-gradient(circle at 0% 50%,
+            $c-morado 35%,
+            $c-celeste 65%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin-bottom: 0;
     }
 
     .container-card {
+        // CARD POSITION
         position: relative;
         z-index: 1;
         @extend %flex-center-wrap;
-        margin: 0px 0 40px 0;
+        margin: 0px 0 80px 0;          //Separacion card
 
         .card {
+            // CARD
             position: relative;
-            width: 300px;
-            height: 400px;
+            width: 320px;          //Ancho
+            height: 440px;          //Alto
             background: rgba(255, 255, 255, 0.6);
             margin: 20px;
             border-radius: 15px;
             @extend %flex-center-wrap;
             backdrop-filter: blur (10px);
-            box-shadow:-1px 3px 10px -5px $c-morado, 3px 3px 10px -5px $c-celeste;
-            top: 0;
+            box-shadow:
+                -1px 3px 10px -5px $c-morado,
+                3px 3px 10px -5px $c-celeste;
             transition: all 0.5s;
 
             .content {
+                // IMG-TEXT
                 position: relative;
                 @extend %flex-center-wrap;
                 flex-direction: column;
@@ -41,17 +56,17 @@
                 transition: 0.5s;
                 top: 30px;
 
-                
-
                 .imgBX {
+                    // IMG BORDER
                     position: relative;
                     width: 150px;
                     height: 150px;
                     border-radius: 50%;
                     overflow: hidden;
-                    border: 10px solid rgba(0, 0, 0, 0.25);
+                    border: 2px solid rgba(0, 0, 0, 0.3);
 
                     img {
+                        // IMG
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -62,70 +77,60 @@
                 }
 
                 .contentBX p{
+                    // "JORGE LUIS CUEVA ASTULLE
                     color: black;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     font-weight: 500;
                     font-size: 18px;
                     text-align: center;
-                    margin: 20px 0 10px;
+                    margin: 20px 10px 10px 10px;
                     line-height: 1.1em;
 
+
                     span{
+                        // BIBLIOGRAFIA
                         font-size: 12px;
                         font-weight: 300;
                         text-transform: initial;
+                        font-family: 'Arial Narrow', Arial, sans-serif;
+                        line-height: 0px;
                     }
                 }
             }
 
             .sci {
+                // SECTION ICO'S
+                bottom: 10px;
+                position: relative;
                 z-index: 1;
                 @extend %flex-center-wrap;
-                margin: 0px 0 40px 0;
-                position: absolute;
-                bottom: 0px;
-                
+                margin: 0px 0 10px 0;
+
                 li {
+                    // ICO'S
                     list-style: none;
                     margin: 0 10px;
                     transform: translateY(40px);
                     transition: 0.5s;
                     opacity: 0;
-                    transition-delay: calc(0.1s * var(--i));
+                    transition-delay: calc(0.1s * var(--i));     //ico-time
                 }
-            }
-
-            &:hover {
-                box-shadow:-3px 5px 10px -2px $c-morado, 5px 5px 10px -2px $c-celeste;
-                top: -2px;
-
-                .content {
-                    opacity: 1;
-                    transform: translateY(-20px);
-                }
-                .sci li {
-                    transform: translateY(0px);
-                    opacity: 1;
-                }
-            }
-
-            .sci {
-                position: relative;
-                z-index: 1;
-                @extend %flex-center-wrap;
-                margin: 0px 0 40px 0;
 
                 .ico-profe {
+                    // ICO'S BORDER
                     border-radius: 50%;
                     width: 100%;
                     transition: all .1s;
                 }
 
                 .ico-facebook {
+                    // ICO FACEBOOK
                     color: $c-facebook;
                     padding: 8px 12px;
+
                     &:hover {
+                        // FACEBOOK:HOVER
                         color: white;
                         background: radial-gradient(circle at 0% 60%,
                         #037aeb 50%,
@@ -134,9 +139,12 @@
                 }
 
                 .ico-twitter {
+                    // ICO TWITTER
                     color: $c-twitter;
                     padding: 8px 10px;
+
                     &:hover {
+                        // TWITTER:HOVER
                         color: white;
                         background-color: #00b7f9;
                         background: radial-gradient(circle at 0% 100%,
@@ -146,13 +154,15 @@
                         #00b7f9 85%,
                         #515ecf);
                     }
-            
-            
                 }
+
                 .ico-instagram {
+                    // ICO INSTAGRAM
                     color: $c-instagram;
                     padding: 8px 10px;
+
                     &:hover {
+                        // INSTAGRAM:HOVER
                         color: white;
                         background: radial-gradient(circle at 33% 100%,
                             #fed373 4%,
@@ -163,6 +173,22 @@
                     }
                 }
             }
+
+            &:hover {
+                // CARD:HOVER
+                box-shadow:-3px 5px 10px -2px $c-morado, 5px 5px 10px -2px $c-celeste;
+                top: -2px;
+
+                .content {
+                    opacity: 1;
+                    transform: translateY(-20px);
+                }
+                
+                .sci li {
+                    transform: translateY(20px);
+                    opacity: 1;
+                }
+            }          
         }
     }
 }

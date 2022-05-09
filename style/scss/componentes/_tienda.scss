@@ -1,0 +1,136 @@
+#navTienda {
+    // ID
+    position: relative;
+    bottom: 90px;
+}
+
+.tienda-tusuy-marka {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .tienda-title {
+
+        h2 {
+            font-family: 'Patrick Hand', cursive;
+            font-weight: 900;
+            background: 
+            radial-gradient(circle at 0% 50%,
+                $c-morado 35%,
+                $c-celeste 65%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-family: 'Lora', serif;
+        }
+        
+    }
+
+    .tienda-cards {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tienda-container {
+        display: flex;
+        width: 70%;
+        justify-content: space-evenly;
+        flex-wrap: wrap ;
+
+        .tienda-container__card {
+            width: 230px;
+            height: 380px;
+            padding: 2rem 1rem;
+            background: #fff;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            box-shadow: 0px 10px 40px -10px #12889c55, 0px -10px 40px -10px  #a0036355;
+            transition: 0.5s ease-in-out;
+            margin: 0 10px 35px 10px ;
+
+            &:hover{
+                transform: translateY(20px);
+                box-shadow: 0px 5px 40px -5px #12889c55, 0px -15px 40px -5px  #a0036355;
+
+
+                &::before{
+                    opacity: 1;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom,
+                    #a0036366 40%,
+                    #12889cf5)
+                ;
+                z-index: 2;
+                transition: 0.5s all;
+                opacity: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            
+
+            .tienda-info {
+                position: relative;
+                z-index: 3;
+                color: #fff;
+                opacity: 0;
+                transform: translateY(30px);
+                transition: 0.5s all;
+
+                h3{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 900;
+                    
+
+                    -webkit-text-fill-color: mix($c-morado, $c-celeste);
+                    -webkit-text-stroke: 0.8px; 
+                    -webkit-text-stroke-color: white;
+                    
+                }
+
+                p{
+                    letter-spacing: 1px;
+                    font-size: 15px;
+                    margin-top: 8px;
+                    margin-bottom: 20px;
+                }
+                
+            }
+
+            &:hover .tienda-info {
+                opacity: 1;
+                transform: translateY(0px);
+            }    
+        }
+    }
+}
+
+
+

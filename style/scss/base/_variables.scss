@@ -1,11 +1,12 @@
 // MAP-GET
+$c-amarillo: #f6c90a;
 $c-morado: #a00363;
 $c-celeste: #12889c;
 $c-logo: (morado: #a00363, celeste: #12889c);
 
 // nav-> navegador
 
-$c-nav: #000;
+$c-nav: mix($c-morado, $c-celeste);
 
 // bc-> backgroundcolor
 $bc-nav: #fefcec;

@@ -1,13 +1,22 @@
-h1 {
-    font-family: 'Parisienne', cursive;
-    font-weight: 700;
-    background:
-        linear-gradient(to right,
-            map-get($c-logo, "morado"),
-            map-get($c-logo, "celeste")
-        );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0;
+.inicio-tusuy-marka {
+    h1 {
+        // TITULO "TUSUY MARKA"
+        font-family: 'Parisienne', cursive;
+        font-weight: 700;
+        background:
+            linear-gradient(to right,
+                map-get($c-logo, "morado"),
+                map-get($c-logo, "celeste")
+            );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0;
+    }
+
+    p {
+        // TEXTO INICIO
+        font-family: 'Lora', serif;
+    }
 }
+

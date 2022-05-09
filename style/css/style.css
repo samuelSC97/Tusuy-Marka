@@ -1,5 +1,5 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Patrick+Hand&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Parisienne&family=Patrick+Hand&family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,37 +12,59 @@ body {
   background-repeat: repeat;
 }
 
-.rep-card__img, .director .container-card .card .sci, .director .container-card .card .content, .director .container-card .card, .director .container-card, .director {
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img, .director .container-card .card .sci, .director .container-card .card .content, .director .container-card .card, .director .container-card, .director {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.navbar-color {
-  background-color: #fefcec;
+.navbar-header .navbar {
+  background: radial-gradient(circle at 4% 50%, #fceca7 5%, #fed7ef 55%, #cdf3f9);
 }
-.navbar-color .navbar-color__nav .nav-item a {
+.navbar-header .navbar-color__nav .nav-item a {
   font-size: 150%;
   font-family: "Shadows Into Light", cursive;
-  color: #000;
+  color: #594680;
   padding: 0 20px;
   transition: all 0.8s;
 }
-.navbar-color .navbar-color__nav .nav-item a i {
+.navbar-header .navbar-color__nav .nav-item a i {
   padding-right: 5px;
+  transition: all 0.8s;
 }
-.navbar-color .navbar-color__nav .nav-item a:hover {
+.navbar-header .navbar-color__nav .nav-item a:hover {
   transform: scale(1.1);
   transition: all 0.8s;
   color: #12889c;
 }
-.navbar-color .navbar-color__nav .nav-item a:hover i {
+.navbar-header .navbar-color__nav .nav-item a:hover i {
   transition: all 0.8s;
   color: #a00363;
 }
+.navbar-header .navbar-color__nav .nav-item a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(to right, #a00363 10%, #12889c);
+  left: 50%;
+  bottom: 0px;
+  transition: all 0.4s ease-in-out;
+}
+.navbar-header .navbar-color__nav .nav-item:hover ::after {
+  width: 80%;
+  left: 10%;
+}
 
-h1 {
+.separacion-header {
+  height: 3px;
+  background: radial-gradient(circle at 4% 50%, #f6c90a 5%, #a00363 55%, #12889c);
+  position: sticky;
+  border-radius: 0% -50% 0% 0%;
+}
+
+.inicio-tusuy-marka h1 {
   font-family: "Parisienne", cursive;
   font-weight: 700;
   background: linear-gradient(to right, #a00363, #12889c);
@@ -51,33 +73,41 @@ h1 {
   -webkit-text-fill-color: transparent;
   margin-bottom: 0;
 }
+.inicio-tusuy-marka p {
+  font-family: "Lora", serif;
+}
 
 #navDirector {
   position: relative;
-  bottom: 88px;
+  bottom: 90px;
 }
 
 .director {
   min-height: 50vh;
 }
 .director .director-title {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0;
 }
 .director .container-card {
   position: relative;
   z-index: 1;
-  margin: 0px 0 40px 0;
+  margin: 0px 0 80px 0;
 }
 .director .container-card .card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 320px;
+  height: 440px;
   background: rgba(255, 255, 255, 0.6);
   margin: 20px;
   border-radius: 15px;
   backdrop-filter: blur 10px;
   box-shadow: -1px 3px 10px -5px #a00363, 3px 3px 10px -5px #12889c;
-  top: 0;
   transition: all 0.5s;
 }
 .director .container-card .card .content {
@@ -93,7 +123,7 @@ h1 {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 10px solid rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 .director .container-card .card .content .imgBX img {
   position: absolute;
@@ -110,19 +140,21 @@ h1 {
   font-weight: 500;
   font-size: 18px;
   text-align: center;
-  margin: 20px 0 10px;
+  margin: 20px 10px 10px 10px;
   line-height: 1.1em;
 }
 .director .container-card .card .content .contentBX p span {
   font-size: 12px;
   font-weight: 300;
   text-transform: initial;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  line-height: 0px;
 }
 .director .container-card .card .sci {
+  bottom: 10px;
+  position: relative;
   z-index: 1;
-  margin: 0px 0 40px 0;
-  position: absolute;
-  bottom: 0px;
+  margin: 0px 0 10px 0;
 }
 .director .container-card .card .sci li {
   list-style: none;
@@ -131,23 +163,6 @@ h1 {
   transition: 0.5s;
   opacity: 0;
   transition-delay: calc(0.1s * var(--i));
-}
-.director .container-card .card:hover {
-  box-shadow: -3px 5px 10px -2px #a00363, 5px 5px 10px -2px #12889c;
-  top: -2px;
-}
-.director .container-card .card:hover .content {
-  opacity: 1;
-  transform: translateY(-20px);
-}
-.director .container-card .card:hover .sci li {
-  transform: translateY(0px);
-  opacity: 1;
-}
-.director .container-card .card .sci {
-  position: relative;
-  z-index: 1;
-  margin: 0px 0 40px 0;
 }
 .director .container-card .card .sci .ico-profe {
   border-radius: 50%;
@@ -179,8 +194,37 @@ h1 {
   color: white;
   background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
 }
+.director .container-card .card:hover {
+  box-shadow: -3px 5px 10px -2px #a00363, 5px 5px 10px -2px #12889c;
+  top: -2px;
+}
+.director .container-card .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.director .container-card .card:hover .sci li {
+  transform: translateY(20px);
+  opacity: 1;
+}
 
-.rep-departamentos {
+#navRepertorio {
+  position: relative;
+  bottom: 90px;
+}
+
+.repertorio-tusuy-marka .repertorio-info h2 {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+.repertorio-tusuy-marka .repertorio-info p {
+  font-family: "Lora", serif;
+}
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos {
   max-width: 1200px;
   padding: 20px;
   padding-bottom: 40px;
@@ -190,83 +234,167 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.rep-card {
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card {
   width: 250px;
-  /* El texto se relacionara respecto a su padre */
   position: relative;
   margin: 20px 12px;
   font-family: "Shadows Into Light";
   border-radius: 20px;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 8px 0;
   transition: all 0.3s;
 }
-.rep-card:hover {
-  box-shadow: 1px 1px 20px 20px rgba(32, 32, 32, 0.2862745098);
-  /* cuando pase el mouse, info va a hacer algo... */
-}
-.rep-card:hover .rep-card__info {
-  /* Separacion TEXTO/IMAGEN */
-  margin-top: -18px;
-  border-radius: 0px 0px 20px 20px;
-  transform: scale(1.1);
-}
-.rep-card:hover .rep-card__img {
-  /* Cuantos pixeles subira */
-  margin-top: -50px;
-  border-radius: 20px 20px 0px 0px;
-  transform: scale(1.1);
-}
-
-.rep-card__img {
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img {
   width: 100%;
   height: 255px;
   background-color: #eff3f5;
   padding: 10px;
-  /* para poder centrarlo */
   position: relative;
   z-index: 1;
   transition: all 300ms cubic-bezier(0.5, 0, 0, 1);
   border-radius: 20px;
 }
-.rep-card__img img {
-  /* aumentar tamaño del icono */
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img img {
   width: 100%;
   transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
   border-radius: 5%;
 }
-
-/* CONTENEDOR del texto */
-.rep-card__info {
-  /* para un ancho maximo de su padre */
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__info {
   width: 100%;
-  /* HEIGHT (.icon = .info__description */
   height: 150px;
   color: #474747;
   background-color: #eff3f5;
   padding: 20px;
   margin-top: -200px;
-  /* CUBIC-BEZIER-> comienza despacio y termina rapido */
   transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
   border-radius: 20px;
-  /* TEXTO mismo */
 }
-.rep-card__info p {
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__info p {
   font-size: 14px;
-  margin-top: 10px;
-  /* internet explorer */
+  margin-top: 20px;
   display: -webkit-box;
-  /* mozilla firefox */
   display: -moz-box;
   display: box;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
-  /* recortar en la linea 5 */
   -webkit-line-clamp: 5;
   line-clamp: 5;
-  /* recortar lo sobrante */
   overflow: hidden;
+}
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover {
+  box-shadow: 1px 1px 20px 20px rgba(32, 32, 32, 0.2862745098);
+}
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover .rep-card__info {
+  margin-top: -18px;
+  border-radius: 0px 0px 20px 20px;
+  transform: scale(1.1);
+}
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover .rep-card__img {
+  margin-top: -50px;
+  border-radius: 20px 20px 0px 0px;
+  transform: scale(1.1);
+}
+
+#navTienda {
+  position: relative;
+  bottom: 90px;
+}
+
+.tienda-tusuy-marka {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.tienda-tusuy-marka .tienda-title h2 {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+.tienda-tusuy-marka .tienda-title p {
+  font-family: "Lora", serif;
+}
+.tienda-tusuy-marka .tienda-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tienda-tusuy-marka .tienda-container {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card {
+  width: 230px;
+  height: 380px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 10px 40px -10px rgba(18, 136, 156, 0.3333333333), 0px -10px 40px -10px rgba(160, 3, 99, 0.3333333333);
+  transition: 0.5s ease-in-out;
+  margin: 0 10px 35px 10px;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover {
+  transform: translateY(20px);
+  box-shadow: 0px 5px 40px -5px rgba(18, 136, 156, 0.3333333333), 0px -15px 40px -5px rgba(160, 3, 99, 0.3333333333);
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover::before {
+  opacity: 1;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(160, 3, 99, 0.4) 40%, rgba(18, 136, 156, 0.9607843137));
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  -webkit-text-fill-color: #594680;
+  -webkit-text-stroke: 0.8px;
+  -webkit-text-stroke-color: white;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover .tienda-info {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .footer {

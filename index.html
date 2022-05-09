@@ -37,9 +37,16 @@
 </head>
 <body>
 
-    <header class=" navbar-color sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+
+
+
+    <!--------------- HEADER --------------->
+    <header class=" navbar-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container-fluid">
+
+                <!-- LOGO -->
                 <ul class="nav justify-content-start">
                     <li class="nav-item">
                         <a href="#"><img class="img-fluid" src="imagenes/tusuy-marka/logo-tusuy-marka.png" alt="logo Tusuy Marka"></a>
@@ -48,11 +55,15 @@
                         <a href="#"><img class="img-fluid" src="imagenes/tusuy-marka/nombre-tusuy-marka.png" alt="nombre Tusuy Marka"></a>
                     </li>
                 </ul>
+                <!-- FIN LOGO -->
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end navbar-color__nav" id="navbarNav">
-                    <ul class="navbar-nav">
+                
+                    <!-- NAVEGADOR LISTA -->
+                    <ul class="navbar-nav d-sm-inline-block d-md-flex">
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-house"></i>Inicio</a>
                         </li>
@@ -69,18 +80,28 @@
                             <a class="nav-link" href="#navContactos"><i class="fa-solid fa-message"></i>Contactos</a>
                         </li>
                     </ul>
+                    <!-- FIN NAVEGADOR LISTA -->
+
                 </div>
             </div>
         </nav>
+
+        <!-- BORDE NAVEGADOR -->
+        <div class="separacion-header sticky-top"></div>
+
     </header>
+    <!--------------- FIN NAVEGADOR --------------->
 
 
 
-    <!-- INICIO -->
+
+
+    <!--------------- INICIO --------------->
     <section>
 
         <!-- CAROUSEL -->
         <div id="carouselExampleIndicators" class="carousel slide container-fluid px-3" data-bs-ride="carousel">
+
             <!-- Barras inferiores navegador -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
@@ -93,7 +114,7 @@
             <!-- FIN Barras inferiores navegador -->
 
             <!-- Carousel images -->
-            <div class="carousel-inner">
+            <section class="carousel-inner">
                 <div class="carousel-item active img-fluid">
                     <img src="imagenes/carousel/carousel-1.jpg" class="d-block w-100" alt="Imagen carousel 1">
                 </div>
@@ -103,7 +124,7 @@
                 <div class="carousel-item img-fluid">
                     <img src="imagenes/carousel/carousel-3.jpg" class="d-block w-100" alt="imagen carousel 2">
                 </div>
-            </div>
+            </section>
             <!-- FIN Carousel images -->
 
             <!-- Button left -->
@@ -111,172 +132,215 @@
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <!-- FIN Button left -->
 
             <!-- Button right -->
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <!-- FIN Button right -->
             
         </div>
         <!-- FIN CAROUSEL -->
 
-        <!-- PRESENTACION -->
-        <article class="container-fluid justify-content-center">
+        <!-- Historia Tusuy Marka -->
+        <article class="container-fluid justify-content-center inicio-tusuy-marka">
             <div class="container d-flex justify-content-center">
-                <!-- PAJARO IZQUIERDA -->
+                <!-- Pajaro izquierda -->
                 <img class="img-fluid" src="imagenes/tusuy-marka/pajaro-izquierda.png" alt="Pajaro al lado izquierdo">
-                <!-- TITULO -->
+                <!-- Tusuy Marka -->
                 <h1 class="d-flex text-center justify-content-center align-items-center">Tusuy Marka</h1>
-                <!-- PAJARO DERECHA -->
+                <!-- Pajaro derecha -->
                 <img class="img-fluid" src="imagenes/tusuy-marka/pajaro-derecha.png" alt="Pajaro al lado derecho">
             </div>
+
+            <!-- Historia -->
             <p class="text-center">La creacion de la agrupacion Tusuy Marka dio inicio un 25 de Septiembre del 2021 con solo 12 intengrantes. El profesor Jorge Luis Cueva Astulle le dio nombre a la agrupacion, donde Tusuy significa "danzante" y Marca "pueblo", que juntandolas diria "pueblo danzante".
             <br><br>
-            Lo que busca la agrupacion es reactivar las danzas autoctonas, las cuales se ve que ya no se practica mucho por la verguenza, tiempo o espacio. El objetivo de Tusuy Marka es que este crezca y los alumnos se vuelvan maestros, y asi ampliar este bonito deporte que es la danza.</p>
+            Lo que busca la agrupacion es reactivar las danzas autoctonas, las cuales se ve que ya no se practica mucho por el tiempo, espacio o iniciativa. El objetivo de Tusuy Marka es que este crezca y los alumnos se vuelvan maestros, y asi ampliar este bonito deporte que es la danza.</p>
+            <!-- FIN historia -->
+        
         </article>
-        <!-- FIN Presentacion -->
+        <!-- FIN historia Tusuy Marka -->
 
     </section>
-    <!-- FIN INICIO -->
+    <!--------------- FIN INICIO --------------->
 
 
 
-    <!-- DIRECTOR -->
-    
 
+
+    <!--------------- DIRECTOR --------------->
     <div id="navDirector"></div>
     <section class="director">
-        <h2 class="text-center container director-title"> Director</h2>
+
+        <!-- Titulo "Director" -->
+        <h2 class="text-center container director-title ">Director</h2>
+        <!-- FIN Titulo "Director" -->
+
+        <!-- Card -->
         <div class="container container-card">
             <div class="card">
-                <div class="content">
+
+                <!-- Jorge Luis -->
+                <article class="content">
                     
+                    <!-- Foto -->
                     <div class="borde-coreogrado">
                         <div class="imgBX">
-                            <img src="./imagenes/director/jorge-luis-cueva-astulle.jpg" alt="">
+                            <img src="./imagenes/director/jorge-luis-cueva-astulle.jpeg" alt="">
                         </div>
                     </div>
+                    <!-- FIN Foto -->
+
+                    <!-- Text -->
                     <div class="contentBX">
-                        <p>Jorge Luis Cueva Astulle <br> <span>Bailarín, coreógrafo y director de la Agrupación Tusuy Marka, en Puerto Maldonado desde el año 2018 y en Arequipa desde el año 2021</span></p>
+                        <p>Jorge Luis Cueva Astulle <br> <span>Director de la agrupación Tusuy Marka; coreografo y motivador emocional uniendo culturas de nuestros pueblos del Peru, a travez de la danza. Como experiencia; dando inicio triunfal en la provincia de Puerto Maldonado, hermosa capital de Madre de Dios en el año 2018 a la actualidad</span></p>
                     </div>
-                </div>
+                    <!-- FIN Text -->
+                </article>
+                <!-- FIN Jorge Luis -->
+
+                <!-- Redes Sociales -->
                 <ul class=" container sci">
-                    <li style="--i:1 sci-logo">
+                    <li style="--i:1">
                         <a href="#"><i class="fa-brands fa-facebook-f ico-profe ico-facebook"></i></a>
                     </li>
-                    <li style="--i:2 sci-logo">
+                    <li style="--i:2">
                         <a href="#"><i class="fa-brands fa-twitter ico-profe ico-twitter"></i></a>
                     </li>
-                    <li style="--i:3 sci-logo">
+                    <li style="--i:3">
                         <a href="#"><i class="fa-brands fa-instagram ico-profe ico-instagram"></i></a>
                     </li>
                 </ul>
+                <!-- FIN Redes Sociales -->
+
             </div>
         </div>
+        <!-- FIN card -->
+
     </section>
-    
-    <!-- FIN DIRECTOR -->
+    <!--------------- FIN DIRECTOR --------------->
 
 
 
-    <!-- REPERTORIO -->
-    <section id="navRepertorio" class="container">
-        <article>
+
+
+    <!--------------- REPERTORIO --------------->
+    <div id="navRepertorio"></div>
+    <section class="container repertorio-tusuy-marka">
+
+        <!-- Titulo y texto -->
+        <article class="repertorio-info">
             <h2 class="text-center">Repertorio</h2>
-            <p class="text-center">La Agrupación Tusuy Marka hasta la fecha tiene 15 propuestas coreográficas en danza folclórica y baile moderno manifestación artística que nos brinda la posibilidad de expresar mediante la realización de diferentes movimientos corporales las distintas tradiciones y/o costumbres de nuestros pueblos a través de su práctica. Proporcionando a todo ser humano un enriquecimiento cultural y un sentido de pertenencia con nuestras raíces andinas folclóricas y ritmos de bailes modernos, La danza tiene como finalidad el mantener viva la esencia de los pueblos, además tiene sus parámetros artísticos ya establecidos que identifica a cada una de las propuestas artísticas.
+            <p class="text-center">La Agrupación Tusuy Marka hasta la fecha tiene 15 propuestas coreográficas en danza folclórica; la cual nos brinda la posibilidad de expresar mediante la realización de diferentes movimientos corporales las distintas tradiciones y/o costumbres de nuestros pueblos a través de su práctica. Proporcionando a todo ser humano un enriquecimiento cultural y un sentido de pertenencia con nuestras raíces andinas folclóricas. La danza tiene como finalidad el mantener viva la esencia de los pueblos, además tiene sus parámetros artísticos ya establecidos que identifica a cada una de las propuestas artísticas.
             <br><br>
             La danza es la esencia del ser humano que le permite vivenciar las diferentes sensaciones y emociones por medio de movimientos armónicos, logrando que en la intimidad el ser se explaye en todas sus esferas. Al mismo tiempo la danza brinda la oportunidad de resignificar tradiciones y costumbres de nuestros pueblos mediante propuestas dancísticas que involucren la investigación, el folclor, la tradición, la proyección y la estética de la danza como tal.</p>
         </article>
+        <!-- FIN Titulo y texto -->
         
-        <!-- Repositorio departamentos -->
-        <div class="container">
+        <!-- Cards -->
+        <div class="container repertorio-cards">
             <div class="rep-departamentos justify-content-center">
 
-                <!-- Apurimac -->
-                <div class="rep-card rep-apurimac container">
+                <!-- APURIMAC -->
+                <article class="rep-card rep-apurimac container">
                     <div class="rep-card__img">
                         <img src="imagenes/repertorio/apurimac.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, odit officiis! Ipsa quae impedit fuga nam ipsum tenetur quis, similique rerum necessitatibus architecto aliquid enim totam officiis quisquam, iusto blanditiis?</p>
                     </div>
-                </div>
-                <!-- FIN Apurimac -->
+                </article>
             
-                <!-- Puno -->
-                <div class="rep-card rep-puno container">
+                <!-- PUNO -->
+                <article class="rep-card rep-puno container">
                     <div class="rep-card__img">
                         <img src="imagenes/repertorio/puno.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta voluptas, qui, quas nemo eius sed obcaecati, ab dolores provident ut fugiat adipisci? Nihil, voluptatem tenetur laboriosam aliquam eos dolores.</p>
                     </div>
-                </div>
-                <!-- FIN Puno -->
-            
-                <!-- Trujillo -->
-                <div class="rep-card rep-trujillo container">
+                </article>
+
+                <!-- TRUJILLO -->
+                <article class="rep-card rep-trujillo container">
                     <div class="rep-card__img">
                         <img src="imagenes/repertorio/trujillo.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit hic quae deserunt saepe voluptate, maiores illo fugiat, at qui sapiente excepturi totam eligendi voluptatibus voluptates dolor libero quidem, cumque ea!</p>
                     </div>
-                </div>
-                <!-- FIN Trujillo -->
+                </article>
                 
             </div>
         </div>
-        <!-- FIN repositorio departamentos -->
+        <!-- FIN Cardss -->
         
     </section>
+    <!--------------- FIN REPERTORIO --------------->
 
-    <!-- TIENDA -->
-    <section id="navTienda" class="container">
-        <article>
+
+
+
+    
+    <!--------------- TIENDA --------------->
+    <div id="navTienda"></div>
+    <section class="Container tienda-tusuy-marka">
+
+        <!-- Titulo y texto -->
+        <article class="text-center tienda-title">
             <h2>Tienda</h2>
             <p>Si lo que esta buscando es alquilar o comprar accesorios para danza, tambien le ofrecemos esa posibilidad.
             <br><br>
             Al alcance de su mano y de su bolsillo.
             </p>
         </article>
+        <!-- FIN Titulo y texto -->
 
-        <!-- Imagenes -->
-        <div class="row">
-            <!-- Vestimentas -->
-            <div class="col-md-4">
-                <a href="#"><img class="img-fluid" src="imagenes/tienda/vestimentas.jpg" alt="Vestimentas"></a>
-                <p>Aca encontrara Vestimentas en general: Sombreros, pantalones, faldas, ojotas, camisas, etc. </p>
+        <!-- Cards -->
+        <section class="tienda-cards">
+            <div class="tienda-container text-center">
+
+                <!-- VESTIMENTAS -->
+                <section class="tienda-container__card">
+                    <img src="imagenes/tienda/vestimentas.jpg" alt="">
+                    <article class="tienda-info">
+                        <h3>Vestimentas</h3>
+                        <p>Aca encontrara Vestimentas en general: Sombreros, pantalones, faldas, ojotas, camisas, etc.</p>
+                        
+                    </article>
+                </section>
+
+                <!-- PARLANTES -->
+                <section class="tienda-container__card">
+                    <img src="imagenes/tienda/parlantes.jpg" alt="">
+                    <article class="tienda-info">
+                        <h3>Parlantes</h3>
+                        <p>¿Esta buscando un buen equipo de sonido bluetooh? Aca le ofrecemos las marcas LG, Tronsmart, JBL, etc.</p>
+                    </article>
+                </section>
+
+                <!-- CANCIONES -->
+                <section class="tienda-container__card">
+                    <img src="imagenes/tienda/canciones.jpg" alt="">
+                    <article class="tienda-info">
+                        <h3>Canciones</h3>
+                        <p>Vendemos las canciones limpias y tambien las podemos editar para usted ya que sabemos que cuesta tiempo conseguirlas</p>
+                       
+                    </article>
+                </section>
             </div>
-            <!-- FIN vestimentas -->
-
-            <!-- Parlantes -->
-            <div class="col-md-4">
-                <a href="#"><img class="img-fluid" src="imagenes/tienda/vestimentas.jpg" alt="Parlantes"></a>
-                <p>¿Esta buscando un buen equipo de sonido bluetooh? Aca le ofrecemos las marcas LG, Tronsmart, JBL, etc. </p>
-            </div>
-            <!-- FIN parlantes -->
-
-            <!-- Canciones -->
-            <div class="col-md-4">
-                <a href="#"><img class="img-fluid" src="imagenes/tienda/vestimentas.jpg" alt="Canciones"></a>
-                <p>Vendemos las canciones limpias y tambien las podemos editar para usted ya que sabemos que cuesta tiempo conseguirlas</p>
-            </div>
-            <!-- FIN Canciones -->
-
-        </div>
-        <!-- FIN Imagenes -->
-
+        </section>
+        <!-- FIN Cards -->
+        
     </section>
-    <!-- FIN TIENDA -->
+    <!--------------- FIN TIENDA --------------->
 
 
 
-    <!-- FOOTER -->
 
+
+    <!--------------- FOOTER --------------->
     <footer class="footer">
         <p class="copyright">C.D.C Centro de Difusion Cultural Tusuy Marka 2021
         <br>
@@ -285,6 +349,7 @@
         Capilla Jesus Nazareno - 4 de octubre - Arequipa - Peru
         </p>
         
+        <!-- Iconos -->
         <div class="social">
             <a href="#">
                 <i class="fa-brands fa-instagram"></i>
@@ -299,18 +364,21 @@
                 <i class="fa-brands fa-facebook"></i>
             </a>
         </div>
+        <!-- FIN Iconos -->
+
         <p class="copyright">Copyright ©2022 All rights reserved</p>
         <p class="copyright">WebMaster: Arnold Samuel Sucasaire Cueva</p>
         
     </footer>
-    
+    <!--------------- FOOTER --------------->
 
 
 
-    <!-- BOOTSTRAP -->
+
+    <!--------------- BOOTSTRAP --------------->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <!-- FIN BOOTSTRAP -->
+    <!--------------- FIN BOOTSTRAP --------------->
 
 </body>
 </html>

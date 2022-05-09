@@ -1,100 +1,128 @@
-.rep-departamentos {
-    max-width: 1200px;
-    padding: 20px;
-    padding-bottom: 40px;
-    margin: 0px;
-    margin-top: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-  
 
-.rep-card {
-    width: 250px;
-    /* El texto se relacionara respecto a su padre */
+#navRepertorio {
+    // ID
     position: relative;
-    margin: 20px 12px;
-    font-family: 'Shadows Into Light';
+    bottom: 90px;
+}
 
-    border-radius: 20px;
-    padding: 20px 0 20px 0;
 
-    transition: all .3s;
-    
-    &:hover{
-        box-shadow: 1px 1px 20px 20px #20202049;
 
-        /* cuando pase el mouse, info va a hacer algo... */
-        .rep-card__info {
-            /* Separacion TEXTO/IMAGEN */
-            margin-top: -18px;
-            border-radius: 0px 0px 20px 20px;
-            transform: scale(1.1);
+.repertorio-tusuy-marka {
+    .repertorio-info {
+        // REPERTORIO INFO
+
+        h2 {
+            // TITLE
+            font-family: 'Patrick Hand', cursive;
+            font-weight: 900;
+            background: 
+            radial-gradient(circle at 0% 50%,
+                $c-morado 35%,
+                $c-celeste 65%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0;
         }
 
-        .rep-card__img {
-            /* Cuantos pixeles subira */
-            margin-top: -50px;
-            border-radius: 20px 20px 0px 0px;
-            transform: scale(1.1);
+        p {
+            // PARAGRAPH
+            font-family: 'Lora', serif;
+        }
+    }
+
+    .repertorio-cards {
+        .rep-departamentos {
+            // LAS 3 CARDS
+            max-width: 1200px;
+            padding: 20px;
+            padding-bottom: 40px;
+            margin: 0px;
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .rep-card {
+                // CARD 1, 2 Y 3
+                width: 250px;
+                position: relative;
+                margin: 20px 12px;     //espaciado de cards
+                font-family: 'Shadows Into Light';
+                border-radius: 20px;
+                padding: 20px 0 8px 0;     //borde sobrante
+                transition: all .3s;
+
+                .rep-card__img {
+                    // CARD IMG
+                    width: 100%;
+                    height: 255px;
+                    background-color: #eff3f5;
+                    padding: 10px;
+                    @extend %flex-center-wrap;
+                    position: relative;
+                    z-index: 1;
+                    transition: all 300ms cubic-bezier(0.5,0,0,1);
+                    border-radius: 20px;
+                
+                    img {
+                        // IMG WIDTH
+                        width: 100%;
+                        transition: all 400ms cubic-bezier(0.5,0,0,1);
+                        border-radius: 5%;
+                    }
+                }
+
+                .rep-card__info {
+                    // CARD INFO
+                    width: 100%;
+                    height: 150px;
+                    color: #474747;
+                    background-color: #eff3f5;
+                    padding: 20px;
+                    margin-top: -200px;
+                        //tiempos
+                    transition: all 400ms cubic-bezier(0.5,0,0,1);
+                    border-radius: 20px;
+
+                    p {
+                        // INFO PARRAFO
+                        font-size: 14px;
+                        margin-top: 20px;
+                        display: -webkit-box;     //i.explorer
+                        display: -moz-box;     //m.firefox
+                        display: box;
+                        -webkit-box-orient: vertical;
+                        -moz-box-orient: vertical;
+                        box-orient: vertical;
+                            //recortar en linea 5
+                        -webkit-line-clamp: 5;
+                        line-clamp: 5;
+                            //recortar lo sobrante
+                        overflow: hidden;
+                    }
+                }
+
+                &:hover{
+                    // CARD:HOVER
+                    box-shadow: 1px 1px 20px 20px #20202049;
+            
+                    .rep-card__info {
+                        // CARD:HOVER INFO
+                        margin-top: -18px;     //separacion text-img
+                        border-radius: 0px 0px 20px 20px;
+                        transform: scale(1.1);
+                    }
+            
+                    .rep-card__img {
+                        // CARD:HOVER IMG
+                        margin-top: -50px;     //cuanto subira la card
+                        border-radius: 20px 20px 0px 0px;
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
     }
 }
-
-
-.rep-card__img {
-    width: 100%;
-    height: 255px;
-    background-color: #eff3f5;
-    padding: 10px;
-    /* para poder centrarlo */
-    @extend %flex-center-wrap;
-    position: relative;
-    z-index: 1;
-    transition: all 300ms cubic-bezier(0.5,0,0,1);
-    border-radius: 20px;
-
-    img {
-        /* aumentar tamaño del icono */
-        width: 100%;
-        transition: all 400ms cubic-bezier(0.5,0,0,1);
-        border-radius: 5%;
-    }
-}
-
-/* CONTENEDOR del texto */
-.rep-card__info {
-    /* para un ancho maximo de su padre */
-    width: 100%;
-    /* HEIGHT (.icon = .info__description */
-    height: 150px;
-    color: #474747;
-    background-color: #eff3f5;
-    padding: 20px;
-    margin-top: -200px;
-    /* CUBIC-BEZIER-> comienza despacio y termina rapido */
-    transition: all 400ms cubic-bezier(0.5,0,0,1);
-    border-radius: 20px;
-
-    /* TEXTO mismo */
-    p {
-        font-size: 14px;
-        margin-top: 10px;
-        /* internet explorer */
-        display: -webkit-box;
-        /* mozilla firefox */
-        display: -moz-box;
-        display: box;
-        -webkit-box-orient: vertical;
-        -moz-box-orient: vertical;
-        box-orient: vertical;
-        /* recortar en la linea 5 */
-        -webkit-line-clamp: 5;
-        line-clamp: 5;
-        /* recortar lo sobrante */
-        overflow: hidden;
-    }
-}
-  
-  
