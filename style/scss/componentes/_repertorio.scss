@@ -2,7 +2,7 @@
 #navRepertorio {
     // ID
     position: relative;
-    bottom: 90px;
+    bottom: 85px;
 }
 
 
@@ -49,7 +49,7 @@
                 width: 250px;
                 position: relative;
                 margin: 20px 12px;     //espaciado de cards
-                font-family: 'Shadows Into Light';
+                font-family: 'Indie Flower', cursive;
                 border-radius: 20px;
                 padding: 20px 0 8px 0;     //borde sobrante
                 transition: all .3s;
@@ -77,11 +77,11 @@
                 .rep-card__info {
                     // CARD INFO
                     width: 100%;
-                    height: 150px;
+                    height: 200px;
                     color: #474747;
                     background-color: #eff3f5;
                     padding: 20px;
-                    margin-top: -160px;
+                    margin-top: -200px;
                         //tiempos
                     transition: all 400ms cubic-bezier(0.5,0,0,1);
                     border-radius: 20px;
@@ -97,8 +97,8 @@
                         -moz-box-orient: vertical;
                         box-orient: vertical;
                             //recortar en linea 5
-                        -webkit-line-clamp: 5;
-                        line-clamp: 5;
+                        -webkit-line-clamp: 7;
+                        line-clamp: 7;
                             //recortar lo sobrante
                         overflow: hidden;
                     }
