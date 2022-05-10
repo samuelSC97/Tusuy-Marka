@@ -9,6 +9,7 @@
 .director {
     @extend %flex-center-wrap;
     min-height: 50vh;
+    margin-top: 80px;
 
     .director-title {
         // TITULO "DIRECTOR"

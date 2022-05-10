@@ -21,3 +21,119 @@ $h-nav: 78px;
 $c-facebook: #3a4d9c;
 $c-twitter: #00b7f9;
 $c-instagram: #f30263;
+
+
+
+
+
+// PROXIMAMENTE
+:root {
+    /* animaciones constantes */
+    --steps: 10;
+    --saturation: 80%;
+    --lightness: 60%;
+    --hue-offset: 320;
+    --duration: 5000ms;
+  
+
+    
+    /* colores */
+    --color-01: hsl(
+      calc(360 / var(--steps) * 1 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-02: hsl(
+      calc(360 / var(--steps) * 2 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-03: hsl(
+      calc(360 / var(--steps) * 3 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-04: hsl(
+      calc(360 / var(--steps) * 4 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-05: hsl(
+      calc(360 / var(--steps) * 5 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-06: hsl(
+      calc(360 / var(--steps) * 6 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-07: hsl(
+      calc(360 / var(--steps) * 7 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-08: hsl(
+      calc(360 / var(--steps) * 8 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-09: hsl(
+      calc(360 / var(--steps) * 9 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-10: hsl(
+      calc(360 / var(--steps) * 10 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-11: hsl(
+      calc(360 / var(--steps) * 11 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+    --color-crayon: #202036;
+  
+  
+
+
+
+    /* background proximamente */
+  
+      --bg-01-a: no-repeat left 0% top / 11% 0%
+        linear-gradient(to right, var(--color-03), var(--color-04));
+      --bg-01-b: no-repeat left 0% top / 11% 100%
+        linear-gradient(to right, var(--color-03), var(--color-04));
+  
+      --bg-02-a: no-repeat left 12% bottom / 11% 0%
+        linear-gradient(to right, var(--color-04), var(--color-05));
+      --bg-02-b: no-repeat left 12% bottom / 11% 100%
+        linear-gradient(to right, var(--color-04), var(--color-05));
+  
+      --bg-03-a: no-repeat left 24% top / 11% 0
+        linear-gradient(to right, var(--color-05), var(--color-06));
+      --bg-03-b: no-repeat left 24% top / 11% 100%
+        linear-gradient(to right, var(--color-05), var(--color-06));
+  
+      --bg-04-a: no-repeat left 36% bottom / 11% 0%
+        linear-gradient(to right, var(--color-06), var(--color-07));
+      --bg-04-b: no-repeat left 36% bottom / 11% 100%
+        linear-gradient(to right, var(--color-06), var(--color-07));
+  
+      --bg-05-a: no-repeat left 48% top / 11% 0%
+        linear-gradient(to right, var(--color-07), var(--color-08));
+      --bg-05-b: no-repeat left 48% top / 11% 100%
+        linear-gradient(to right, var(--color-07), var(--color-08));
+  
+      --bg-06-a: no-repeat left 60% bottom / 11% 0%
+        linear-gradient(to right, var(--color-08), var(--color-09));
+      --bg-06-b: no-repeat left 60% bottom / 11% 100%
+        linear-gradient(to right, var(--color-08), var(--color-09));
+  
+      --bg-07-a: no-repeat left 72% top / 11% 0%
+        linear-gradient(to right, var(--color-09), var(--color-10));
+      --bg-07-b: no-repeat left 72% top / 11% 100%
+        linear-gradient(to right, var(--color-09), var(--color-10));
+  
+  }

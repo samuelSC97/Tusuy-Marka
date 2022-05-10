@@ -1,8 +1,104 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Patrick+Hand&family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Parisienne&family=Patrick+Hand&family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+:root {
+  /* animaciones constantes */
+  --steps: 10;
+  --saturation: 80%;
+  --lightness: 60%;
+  --hue-offset: 320;
+  --duration: 5000ms;
+  /* colores */
+  --color-01: hsl(
+    calc(360 / var(--steps) * 1 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-02: hsl(
+    calc(360 / var(--steps) * 2 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-03: hsl(
+    calc(360 / var(--steps) * 3 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-04: hsl(
+    calc(360 / var(--steps) * 4 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-05: hsl(
+    calc(360 / var(--steps) * 5 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-06: hsl(
+    calc(360 / var(--steps) * 6 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-07: hsl(
+    calc(360 / var(--steps) * 7 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-08: hsl(
+    calc(360 / var(--steps) * 8 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-09: hsl(
+    calc(360 / var(--steps) * 9 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-10: hsl(
+    calc(360 / var(--steps) * 10 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-11: hsl(
+    calc(360 / var(--steps) * 11 + var(--hue-offset)),
+    var(--saturation),
+    var(--lightness)
+  );
+  --color-crayon: #202036;
+  /* background proximamente */
+  --bg-01-a: no-repeat left 0% top / 11% 0%
+    linear-gradient(to right, var(--color-03), var(--color-04));
+  --bg-01-b: no-repeat left 0% top / 11% 100%
+    linear-gradient(to right, var(--color-03), var(--color-04));
+  --bg-02-a: no-repeat left 12% bottom / 11% 0%
+    linear-gradient(to right, var(--color-04), var(--color-05));
+  --bg-02-b: no-repeat left 12% bottom / 11% 100%
+    linear-gradient(to right, var(--color-04), var(--color-05));
+  --bg-03-a: no-repeat left 24% top / 11% 0
+    linear-gradient(to right, var(--color-05), var(--color-06));
+  --bg-03-b: no-repeat left 24% top / 11% 100%
+    linear-gradient(to right, var(--color-05), var(--color-06));
+  --bg-04-a: no-repeat left 36% bottom / 11% 0%
+    linear-gradient(to right, var(--color-06), var(--color-07));
+  --bg-04-b: no-repeat left 36% bottom / 11% 100%
+    linear-gradient(to right, var(--color-06), var(--color-07));
+  --bg-05-a: no-repeat left 48% top / 11% 0%
+    linear-gradient(to right, var(--color-07), var(--color-08));
+  --bg-05-b: no-repeat left 48% top / 11% 100%
+    linear-gradient(to right, var(--color-07), var(--color-08));
+  --bg-06-a: no-repeat left 60% bottom / 11% 0%
+    linear-gradient(to right, var(--color-08), var(--color-09));
+  --bg-06-b: no-repeat left 60% bottom / 11% 100%
+    linear-gradient(to right, var(--color-08), var(--color-09));
+  --bg-07-a: no-repeat left 72% top / 11% 0%
+    linear-gradient(to right, var(--color-09), var(--color-10));
+  --bg-07-b: no-repeat left 72% top / 11% 100%
+    linear-gradient(to right, var(--color-09), var(--color-10));
 }
 
 body {
@@ -84,6 +180,7 @@ body {
 
 .director {
   min-height: 50vh;
+  margin-top: 80px;
 }
 .director .director-title {
   font-family: "Patrick Hand", cursive;
@@ -305,6 +402,8 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 .tienda-tusuy-marka .tienda-title h2 {
   font-family: "Patrick Hand", cursive;
@@ -342,6 +441,7 @@ body {
   box-shadow: 0px 10px 40px -10px rgba(18, 136, 156, 0.3333333333), 0px -10px 40px -10px rgba(160, 3, 99, 0.3333333333);
   transition: 0.5s ease-in-out;
   margin: 0 10px 35px 10px;
+  cursor: pointer;
 }
 .tienda-tusuy-marka .tienda-container .tienda-container__card:hover {
   transform: translateY(20px);
@@ -397,14 +497,140 @@ body {
   transform: translateY(0px);
 }
 
+.barra-proximamente {
+  height: 4rem;
+  width: 20rem;
+  max-width: 100%;
+  border: 0.5rem solid var(--color-crayon);
+  border-radius: 0.5rem;
+  animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
+  box-sizing: border-box;
+  position: relative;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.barra-proximamente::after {
+  /* LAPIZ CARACTERISTICAS */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*tamaño lapiz*/
+  height: 100%;
+  transform-origin: left center;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  margin-top: -7.5%;
+  margin-left: -2.5%;
+  animation: infinite alternate move-marker var(--duration) ease-in-out;
+  background: no-repeat left 0% top 40%/8% 17% linear-gradient(to bottom right, transparent, transparent, transparent, transparent 35%, #000 35%), no-repeat left 0% bottom 40%/8% 17% linear-gradient(to top right, transparent, transparent, transparent, transparent 35%, #000 35%), no-repeat left 0% top/21.5% 50% linear-gradient(to bottom right, transparent, transparent 45%, #e0ad96 45%), no-repeat left 0% bottom/21.5% 50% linear-gradient(to top right, transparent, transparent 45%, #b48b5e 45%, #e0ad96 75%), no-repeat left 88.5% bottom/1.5% 100% linear-gradient(#92c2d5 70%, #0c8da5), no-repeat left 87% bottom/1.5% 100% linear-gradient(#c16a91 70%, #860c51), no-repeat left 90% bottom/7% 100% linear-gradient(#d1d1d1 70%, #a9a9a9), no-repeat right 33% bottom/70% 100% linear-gradient(#ffeb00 70%, #dbb500), no-repeat right 0 bottom/11% 100% linear-gradient(#e96662 70%, #f44538);
+}
+
+@keyframes move-marker {
+  /* MOVIMIENTO DEL LAPIZ */
+  14.28% {
+    transform: translate(13%, 100%) rotate(2.5deg);
+  }
+  28.57% {
+    transform: translate(23.4%, 0) rotate(-5deg);
+  }
+  42.85% {
+    transform: translate(34.2%, 100%) rotate(2.5deg);
+  }
+  57.14% {
+    transform: translate(45%, 0) rotate(-5deg);
+  }
+  71.42% {
+    transform: translate(55.8%, 100%) rotate(2.5deg);
+  }
+  85.71% {
+    transform: translate(66.6%, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate(77.4%, 100%) rotate(2.5deg);
+  }
+}
+@keyframes rainbow-fill {
+  /* COLORES TIEMPOS */
+  0% {
+    background: var(--bg-01-a), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  14.28% {
+    background: var(--bg-01-b), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  28.57% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  42.85% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  57.14% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  71.42% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-a), var(--bg-07-a);
+  }
+  85.71% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-a);
+  }
+  100% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-b);
+  }
+}
+/* for demo */
+.modal-proximamente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  padding: 1rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.modal-texto {
+  color: var(--color-crayon);
+  font-size: 1.5rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  letter-spacing: 1px;
+}
+
+.modal-backdrop {
+  opacity: 1;
+  filter: alpha(opacity=0);
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.modal-header-border {
+  border-bottom: 0;
+  padding: 0;
+}
+
+.modal-content {
+  background: radial-gradient(circle at 0% 50%, #fdf2c5 5%, #fff0f9 55%, #e4f8fc);
+  border: 1px solid #a00363;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 0px black;
+}
+
 .footer {
   padding: 5px 0;
-  background-color: #fff5ee;
+  background-color: #fdf2c5;
   color: #4b4c4d;
+  background: radial-gradient(circle at 50% 0%, #fbea9e 5%, #fed7ef 55%, #b6edf7);
 }
 .footer .social {
   text-align: center;
   padding-bottom: 0 px;
+  margin: 10px 0;
 }
 .footer .social a {
   font-size: 24px;

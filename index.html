@@ -245,7 +245,7 @@
                 <!-- APURIMAC -->
                 <article class="rep-card rep-apurimac container">
                     <div class="rep-card__img">
-                        <img src="imagenes/repertorio/apurimac.jpg" alt="">
+                        <img src="imagenes/repertorio/repertorio-apurimac.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, odit officiis! Ipsa quae impedit fuga nam ipsum tenetur quis, similique rerum necessitatibus architecto aliquid enim totam officiis quisquam, iusto blanditiis?</p>
@@ -255,7 +255,7 @@
                 <!-- PUNO -->
                 <article class="rep-card rep-puno container">
                     <div class="rep-card__img">
-                        <img src="imagenes/repertorio/puno.jpg" alt="">
+                        <img src="imagenes/repertorio/repertorio-ayacucho.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta voluptas, qui, quas nemo eius sed obcaecati, ab dolores provident ut fugiat adipisci? Nihil, voluptatem tenetur laboriosam aliquam eos dolores.</p>
@@ -265,7 +265,7 @@
                 <!-- TRUJILLO -->
                 <article class="rep-card rep-trujillo container">
                     <div class="rep-card__img">
-                        <img src="imagenes/repertorio/trujillo.jpg" alt="">
+                        <img src="imagenes/repertorio/repertorio-puno.jpg" alt="">
                     </div>
                     <div class="rep-card__info">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit hic quae deserunt saepe voluptate, maiores illo fugiat, at qui sapiente excepturi totam eligendi voluptatibus voluptates dolor libero quidem, cumque ea!</p>
@@ -302,7 +302,7 @@
             <div class="tienda-container text-center">
 
                 <!-- VESTIMENTAS -->
-                <section class="tienda-container__card">
+                <section class="tienda-container__card" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img src="imagenes/tienda/vestimentas.jpg" alt="">
                     <article class="tienda-info">
                         <h3>Vestimentas</h3>
@@ -312,7 +312,7 @@
                 </section>
 
                 <!-- PARLANTES -->
-                <section class="tienda-container__card">
+                <section class="tienda-container__card" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img src="imagenes/tienda/parlantes.jpg" alt="">
                     <article class="tienda-info">
                         <h3>Parlantes</h3>
@@ -321,7 +321,7 @@
                 </section>
 
                 <!-- CANCIONES -->
-                <section class="tienda-container__card">
+                <section class="tienda-container__card" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img src="imagenes/tienda/canciones.jpg" alt="">
                     <article class="tienda-info">
                         <h3>Canciones</h3>
@@ -330,10 +330,35 @@
                     </article>
                 </section>
             </div>
+            
         </section>
         <!-- FIN Cards -->
-        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class=" modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+            
+
+                <div class="modal-body">
+                    <div class="modal-header modal-header-border">
+                        
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    <div class="modal-proximamente">   
+                        
+                        <div class="d-inline-block">        
+                            <h5 class="modal-title modal-texto" id="exampleModalToggleLabel">Proximamente...</h5> 
+                        </div>
+                              
+                        <div class="barra-proximamente"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
+    
     <!--------------- FIN TIENDA --------------->
 
 
@@ -342,11 +367,12 @@
 
     <!--------------- FOOTER --------------->
     <footer class="footer">
-        <p class="copyright">C.D.C Centro de Difusion Cultural Tusuy Marka 2021
+        <p class="copyright">
+        Capilla Jesus Nazareno - 4 de octubre - Arequipa - Peru
+        <br>
+        Copyright ©2022 All rights reserved
         <br>
         Telefono: 989234106
-        <br>
-        Capilla Jesus Nazareno - 4 de octubre - Arequipa - Peru
         </p>
         
         <!-- Iconos -->
@@ -366,8 +392,7 @@
         </div>
         <!-- FIN Iconos -->
 
-        <p class="copyright">Copyright ©2022 All rights reserved</p>
-        <p class="copyright">WebMaster: Arnold Samuel Sucasaire Cueva</p>
+        
         
     </footer>
     <!--------------- FOOTER --------------->

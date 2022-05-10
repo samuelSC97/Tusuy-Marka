@@ -2,11 +2,19 @@
     padding:5px 0;
 
     // MIXINS
-    @include colores (#fff5ee, #4b4c4d);
+    @include colores (lighten($c-amarillo, 38%), #4b4c4d);
+    background: 
+            radial-gradient(circle at 50% 0%,
+                lighten($c-amarillo, 30%) 5%,
+                lighten($c-morado, 60%) 55%,
+                lighten($c-celeste, 50%)
+                // lighten(   , 38%%, 65%, 60%)
+            );
 
     .social {
         text-align:center;
         padding-bottom:0 px;
+        margin: 10px 0;
 
         a {
             font-size:24px;
