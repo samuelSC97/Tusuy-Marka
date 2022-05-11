@@ -516,7 +516,6 @@ body {
   margin: 1rem;
   margin-left: 0;
 }
-
 .barra-proximamente::after {
   /* LAPIZ CARACTERISTICAS */
   content: "";
@@ -587,8 +586,17 @@ body {
     background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-b);
   }
 }
-/* for demo */
-.modal-proximamente {
+.modal-content {
+  background: radial-gradient(circle at 0% 50%, #fdf2c5 5%, #fff0f9 55%, #e4f8fc);
+  border: 1px solid #a00363;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 0px black;
+}
+.modal-content .modal-header-border {
+  border-bottom: 0;
+  padding: 0;
+}
+.modal-content .modal-proximamente {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -598,8 +606,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
-
-.modal-texto {
+.modal-content .modal-proximamente .modal-texto {
   color: var(--color-crayon);
   font-size: 1.5rem;
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -614,18 +621,6 @@ body {
 .modal-backdrop.fade {
   filter: alpha(opacity=0);
   opacity: 0;
-}
-
-.modal-header-border {
-  border-bottom: 0;
-  padding: 0;
-}
-
-.modal-content {
-  background: radial-gradient(circle at 0% 50%, #fdf2c5 5%, #fff0f9 55%, #e4f8fc);
-  border: 1px solid #a00363;
-  border-radius: 15px;
-  box-shadow: 5px 5px 20px 0px black;
 }
 
 .footer {

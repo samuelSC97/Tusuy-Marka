@@ -1,21 +1,17 @@
+.barra-proximamente {
+  height: 4rem;
+  width: 20rem;
+  max-width: 100%;
+  border: 0.5rem solid var(--color-crayon);
+  border-radius: 0.5rem;
+  animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
+  box-sizing: border-box;
+  position: relative;
+  margin: 1rem;
+  margin-left: 0;
 
-  
-  .barra-proximamente {
-    height: 4rem;
-    width: 20rem;
-    max-width: 100%;
-    border: 0.5rem solid var(--color-crayon);
-    border-radius: 0.5rem;
-    animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
-    box-sizing: border-box;
-    position: relative;
-    margin: 1rem;
-    margin-left: 0;
-  }
-  
-  .barra-proximamente::after {
+  &::after {
     /* LAPIZ CARACTERISTICAS */
-  
     content: "";
     display: block;
     position: absolute;
@@ -29,11 +25,10 @@
     margin-top: -7.5%;
     margin-left: -2.5%;
     animation: infinite alternate move-marker var(--duration) ease-in-out;
-  
+
     background:
-  
       /* PUNTA NEGRA
-  
+
         /*Superior*/       /* largo / alto */
         no-repeat left 0% top 40% / 8% 17%
           linear-gradient(
@@ -44,7 +39,7 @@
             transparent 35%,
             #000 35%
           ),
-  
+
         /* Inferior */
         no-repeat left 0% bottom 40% / 8% 17%
           linear-gradient(
@@ -55,11 +50,11 @@
             transparent 35%,
             #000 35%
           ),
-     
-  
-  
+    
+
+
       /* PUNTA CLARA */
-  
+
         /* Superior */
         no-repeat left 0% top / 21.5% 50%
           linear-gradient(
@@ -68,7 +63,7 @@
             transparent 45%,
             #e0ad96 45%
           ),
-  
+
         /* Inferior */
         no-repeat left 0% bottom / 21.5% 50%
           linear-gradient(
@@ -78,29 +73,32 @@
             #b48b5e 45%,
             #e0ad96 75%
           ),
-  
-  
-      /* FRANJA CELESTE */
-      no-repeat left 88.5% bottom / 1.5% 100%
-      linear-gradient(#92c2d5 70%, #0c8da5),
-  
-      /* FRANJA MORADA */
-      no-repeat left 87% bottom / 1.5% 100%
-      linear-gradient(#c16a91 70%, #860c51),
-  
-      // PARTE PLOMA
-      no-repeat left 90% bottom / 7% 100%
-      linear-gradient(#d1d1d1 70%, #a9a9a9),
-  
-      /* TRONCO */
-      no-repeat right 33% bottom / 70% 100%
-        linear-gradient( #ffeb00 70%, #dbb500),
-        
-      /* BORRADOR */
-      no-repeat right 0 bottom / 11% 100%
-        linear-gradient( #e96662 70%, #f44538) 
-    ;        
+
+
+        /* FRANJA CELESTE */
+        no-repeat left 88.5% bottom / 1.5% 100%
+        linear-gradient(#92c2d5 70%, #0c8da5),
+
+        /* FRANJA MORADA */
+        no-repeat left 87% bottom / 1.5% 100%
+        linear-gradient(#c16a91 70%, #860c51),
+
+        // PARTE PLOMA
+        no-repeat left 90% bottom / 7% 100%
+        linear-gradient(#d1d1d1 70%, #a9a9a9),
+
+        /* TRONCO */
+        no-repeat right 33% bottom / 70% 100%
+          linear-gradient( #ffeb00 70%, #dbb500),
+          
+        /* BORRADOR */
+        no-repeat right 0 bottom / 11% 100%
+          linear-gradient( #e96662 70%, #f44538) 
+    ;
   }
+}
+  
+
   
   @keyframes move-marker {
     /* MOVIMIENTO DEL LAPIZ */
@@ -167,50 +165,64 @@
     }
   }
   
-  /* for demo */
-  .modal-proximamente {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
-    min-height: 30vh;
-    padding: 1rem 1rem 2rem 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
-  .modal-texto {
-    color: var(--color-crayon);
-    font-size: 1.5rem;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    letter-spacing: 1px;
-  }
   
   
-  .modal-backdrop {
-    opacity: 1;
-    filter: alpha(opacity=0);
-  }
   
-  .modal-backdrop.fade {
-    filter: alpha(opacity=0);
-    opacity: 0;
-  }
+  
+  
+  
+ 
+
+
+
+  
+
+.modal-content {
+  // Modal contenedor
+  background: 
+          radial-gradient(circle at 0% 50%,
+              lighten($c-amarillo, 38%) 5%,
+              lighten($c-morado, 65%) 55%,
+              lighten($c-celeste, 60%)
+          );
+  border: 1px solid $c-morado;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px 0px black;
 
   .modal-header-border {
+    // borde
     border-bottom: 0;
     padding: 0;
   }
 
-  .modal-content {
-    background: 
-            radial-gradient(circle at 0% 50%,
-                lighten($c-amarillo, 38%) 5%,
-                lighten($c-morado, 65%) 55%,
-                lighten($c-celeste, 60%)
-            );
-    border: 1px solid $c-morado;
-    border-radius: 15px;
-    box-shadow: 5px 5px 20px 0px black;
+  .modal-proximamente {
+    // lapiz center
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    padding: 1rem 1rem 2rem 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .modal-texto {
+      // Texto del modal
+      color: var(--color-crayon);
+      font-size: 1.5rem;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      letter-spacing: 1px;
+    }
   }
+}
+
+
+// Quitar el color oscuro del modal
+.modal-backdrop {
+  opacity: 1;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
