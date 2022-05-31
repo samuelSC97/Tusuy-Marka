@@ -1,0 +1,876 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lora:ital@1&family=Parisienne&family=Patrick+Hand&family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* animaciones constantes */
+  --steps: 10;
+  --saturation: 80%;
+  --lightness: 60%;
+  --hue-offset: 320;
+  --duration: 5000ms;
+  /* colores */
+  --color-01: hsl(
+      calc(360 / var(--steps) * 1 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-02: hsl(
+      calc(360 / var(--steps) * 2 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-03: hsl(
+      calc(360 / var(--steps) * 3 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-04: hsl(
+      calc(360 / var(--steps) * 4 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-05: hsl(
+      calc(360 / var(--steps) * 5 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-06: hsl(
+      calc(360 / var(--steps) * 6 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-07: hsl(
+      calc(360 / var(--steps) * 7 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-08: hsl(
+      calc(360 / var(--steps) * 8 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-09: hsl(
+      calc(360 / var(--steps) * 9 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-10: hsl(
+      calc(360 / var(--steps) * 10 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-11: hsl(
+      calc(360 / var(--steps) * 11 + var(--hue-offset)),
+      var(--saturation),
+      var(--lightness)
+    );
+  --color-crayon: #202036;
+  /* background proximamente */
+  --bg-01-a: no-repeat left 0% top / 11% 0%
+        linear-gradient(to right, var(--color-03), var(--color-04));
+  --bg-01-b: no-repeat left 0% top / 11% 100%
+        linear-gradient(to right, var(--color-03), var(--color-04));
+  --bg-02-a: no-repeat left 12% bottom / 11% 0%
+        linear-gradient(to right, var(--color-04), var(--color-05));
+  --bg-02-b: no-repeat left 12% bottom / 11% 100%
+        linear-gradient(to right, var(--color-04), var(--color-05));
+  --bg-03-a: no-repeat left 24% top / 11% 0
+        linear-gradient(to right, var(--color-05), var(--color-06));
+  --bg-03-b: no-repeat left 24% top / 11% 100%
+        linear-gradient(to right, var(--color-05), var(--color-06));
+  --bg-04-a: no-repeat left 36% bottom / 11% 0%
+        linear-gradient(to right, var(--color-06), var(--color-07));
+  --bg-04-b: no-repeat left 36% bottom / 11% 100%
+        linear-gradient(to right, var(--color-06), var(--color-07));
+  --bg-05-a: no-repeat left 48% top / 11% 0%
+        linear-gradient(to right, var(--color-07), var(--color-08));
+  --bg-05-b: no-repeat left 48% top / 11% 100%
+        linear-gradient(to right, var(--color-07), var(--color-08));
+  --bg-06-a: no-repeat left 60% bottom / 11% 0%
+        linear-gradient(to right, var(--color-08), var(--color-09));
+  --bg-06-b: no-repeat left 60% bottom / 11% 100%
+        linear-gradient(to right, var(--color-08), var(--color-09));
+  --bg-07-a: no-repeat left 72% top / 11% 0%
+        linear-gradient(to right, var(--color-09), var(--color-10));
+  --bg-07-b: no-repeat left 72% top / 11% 100%
+        linear-gradient(to right, var(--color-09), var(--color-10));
+}
+
+body {
+  background-image: url(../../imagenes/tusuy-marka/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+.director, .director .container-card, .director .container-card .card, .director .container-card .card .content, .director .container-card .card .sci, .repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.navbar-header .navbar {
+  background: radial-gradient(circle at 4% 50%, #fceca7 5%, #fed7ef 55%, #cdf3f9);
+}
+
+.navbar-header .navbar-color__nav .nav-item a {
+  font-size: 150%;
+  font-family: 'Shadows Into Light', cursive;
+  color: #594680;
+  padding: 0 20px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.navbar-header .navbar-color__nav .nav-item a i {
+  padding-right: 5px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.navbar-header .navbar-color__nav .nav-item a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #12889c;
+}
+
+.navbar-header .navbar-color__nav .nav-item a:hover i {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  color: #a00363;
+}
+
+.navbar-header .navbar-color__nav .nav-item a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #a00363), to(#12889c));
+  background: linear-gradient(to right, #a00363 10%, #12889c);
+  left: 50%;
+  bottom: 0px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-header .navbar-color__nav .nav-item:hover ::after {
+  width: 80%;
+  left: 10%;
+}
+
+.separacion-header {
+  height: 3px;
+  background: radial-gradient(circle at 4% 50%, #f6c90a 5%, #a00363 55%, #12889c);
+  position: -webkit-sticky;
+  position: sticky;
+  border-radius: 0% -50% 0% 0%;
+}
+
+.inicio-separacion {
+  margin-bottom: 60px;
+}
+
+.inicio-separacion .inicio-tusuy-marka h1 {
+  font-family: 'Parisienne', cursive;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(#a00363), to(#12889c));
+  background: linear-gradient(to right, #a00363, #12889c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+.inicio-separacion .inicio-tusuy-marka p {
+  font-family: 'Lora', serif;
+}
+
+#navDirector {
+  position: relative;
+  bottom: 85px;
+}
+
+.director {
+  min-height: 50vh;
+  margin-bottom: 60px;
+}
+
+.director .director-title {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+.director .container-card {
+  position: relative;
+  z-index: 1;
+  margin: 0px 0 0px 0;
+}
+
+.director .container-card .card {
+  position: relative;
+  width: 320px;
+  height: 440px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 20px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur 10px;
+          backdrop-filter: blur 10px;
+  -webkit-box-shadow: -1px 3px 10px -5px #a00363, 3px 3px 10px -5px #12889c;
+          box-shadow: -1px 3px 10px -5px #a00363, 3px 3px 10px -5px #12889c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.director .container-card .card .content {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 30px;
+}
+
+.director .container-card .card .content .imgBX {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.director .container-card .card .content .imgBX img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.director .container-card .card .content .contentBX p {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 10px 10px 10px;
+  line-height: 1.1em;
+}
+
+.director .container-card .card .content .contentBX p span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  line-height: 0px;
+}
+
+.director .container-card .card .sci {
+  bottom: 10px;
+  position: relative;
+  z-index: 1;
+  margin: 0px 0 10px 0;
+}
+
+.director .container-card .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-transition-delay: calc(0.1s * var(--i));
+          transition-delay: calc(0.1s * var(--i));
+}
+
+.director .container-card .card .sci .ico-profe {
+  border-radius: 50%;
+  width: 100%;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.director .container-card .card .sci .ico-facebook {
+  color: #3a4d9c;
+  padding: 8px 12px;
+}
+
+.director .container-card .card .sci .ico-facebook:hover {
+  color: white;
+  background: radial-gradient(circle at 0% 60%, #037aeb 50%, #0275e7);
+}
+
+.director .container-card .card .sci .ico-twitter {
+  color: #00b7f9;
+  padding: 8px 10px;
+}
+
+.director .container-card .card .sci .ico-twitter:hover {
+  color: white;
+  background-color: #00b7f9;
+  background: radial-gradient(circle at 0% 100%, #89d2fc 10%, #00bcfa 50%, #00b7f9 62%, #00b7f9 85%, #515ecf);
+}
+
+.director .container-card .card .sci .ico-instagram {
+  color: #f30263;
+  padding: 8px 10px;
+}
+
+.director .container-card .card .sci .ico-instagram:hover {
+  color: white;
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+}
+
+.director .container-card .card:hover {
+  -webkit-box-shadow: -3px 5px 10px -2px #a00363, 5px 5px 10px -2px #12889c;
+          box-shadow: -3px 5px 10px -2px #a00363, 5px 5px 10px -2px #12889c;
+  top: -2px;
+}
+
+.director .container-card .card:hover .content {
+  opacity: 1;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.director .container-card .card:hover .sci li {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 1;
+}
+
+#navRepertorio {
+  position: relative;
+  bottom: 85px;
+}
+
+.repertorio-tusuy-marka .repertorio-info h2 {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+.repertorio-tusuy-marka .repertorio-info p {
+  font-family: 'Lora', serif;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos {
+  max-width: 1200px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin: 0px;
+  margin-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card {
+  width: 250px;
+  position: relative;
+  margin: 20px 12px;
+  font-family: 'Indie Flower', cursive;
+  border-radius: 20px;
+  padding: 20px 0 8px 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img {
+  width: 100%;
+  height: 255px;
+  background-color: #eff3f5;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 300ms cubic-bezier(0.5, 0, 0, 1);
+  transition: all 300ms cubic-bezier(0.5, 0, 0, 1);
+  border-radius: 20px;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__img img {
+  width: 100%;
+  -webkit-transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+  transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+  border-radius: 5%;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__info {
+  width: 100%;
+  height: 200px;
+  color: #474747;
+  background-color: #eff3f5;
+  padding: 20px;
+  margin-top: -200px;
+  -webkit-transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+  transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+  border-radius: 20px;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card .rep-card__info p {
+  font-size: 14px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover {
+  -webkit-box-shadow: 1px 1px 20px 20px #20202049;
+          box-shadow: 1px 1px 20px 20px #20202049;
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover .rep-card__info {
+  margin-top: -18px;
+  border-radius: 0px 0px 20px 20px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.repertorio-tusuy-marka .repertorio-cards .rep-departamentos .rep-card:hover .rep-card__img {
+  margin-top: -50px;
+  border-radius: 20px 20px 0px 0px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#navTienda {
+  position: relative;
+  bottom: 85px;
+}
+
+.tienda-tusuy-marka {
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.tienda-tusuy-marka .tienda-title h2 {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 900;
+  background: radial-gradient(circle at 0% 50%, #a00363 35%, #12889c 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0;
+}
+
+.tienda-tusuy-marka .tienda-title p {
+  font-family: 'Lora', serif;
+}
+
+.tienda-tusuy-marka .tienda-cards {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tienda-tusuy-marka .tienda-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card {
+  width: 230px;
+  height: 380px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-shadow: -5px 5px 10px 0px #777;
+          box-shadow: -5px 5px 10px 0px #777;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin: 0 10px 35px 10px;
+  cursor: pointer;
+  border: 5px solid #594680;
+  border-radius: 15px;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-box-shadow: -5px -2px 10px 0px #777;
+          box-shadow: -5px -2px 10px 0px #777;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover::before {
+  opacity: 1;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #a0036366), to(#12889cf5));
+  background: linear-gradient(to bottom, #a0036366 40%, #12889cf5);
+  z-index: 2;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  -webkit-text-fill-color: #594680;
+  -webkit-text-stroke: 0.8px;
+  -webkit-text-stroke-color: white;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card .tienda-info p {
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.tienda-tusuy-marka .tienda-container .tienda-container__card:hover .tienda-info {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.barra-proximamente {
+  height: 4rem;
+  width: 20rem;
+  max-width: 100%;
+  border: 0.5rem solid var(--color-crayon);
+  border-radius: 0.5rem;
+  -webkit-animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
+          animation: infinite alternate rainbow-fill var(--duration) ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.barra-proximamente::after {
+  /* LAPIZ CARACTERISTICAS */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*tamaño lapiz*/
+  height: 100%;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  border-radius: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -7.5%;
+  margin-left: -2.5%;
+  -webkit-animation: infinite alternate move-marker var(--duration) ease-in-out;
+          animation: infinite alternate move-marker var(--duration) ease-in-out;
+  background: no-repeat left 0% top 40%/8% 17% -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(transparent), color-stop(transparent), color-stop(35%, transparent), color-stop(35%, #000)), no-repeat left 0% bottom 40%/8% 17% -webkit-gradient(linear, left bottom, right top, from(transparent), color-stop(transparent), color-stop(transparent), color-stop(35%, transparent), color-stop(35%, #000)), no-repeat left 0% top/21.5% 50% -webkit-gradient(linear, left top, right bottom, from(transparent), color-stop(45%, transparent), color-stop(45%, #e0ad96)), no-repeat left 0% bottom/21.5% 50% -webkit-gradient(linear, left bottom, right top, from(transparent), color-stop(45%, transparent), color-stop(45%, #b48b5e), color-stop(75%, #e0ad96)), no-repeat left 88.5% bottom/1.5% 100% -webkit-gradient(linear, left top, left bottom, color-stop(70%, #92c2d5), to(#0c8da5)), no-repeat left 87% bottom/1.5% 100% -webkit-gradient(linear, left top, left bottom, color-stop(70%, #c16a91), to(#860c51)), no-repeat left 90% bottom/7% 100% -webkit-gradient(linear, left top, left bottom, color-stop(70%, #d1d1d1), to(#a9a9a9)), no-repeat right 33% bottom/70% 100% -webkit-gradient(linear, left top, left bottom, color-stop(70%, #ffeb00), to(#dbb500)), no-repeat right 0 bottom/11% 100% -webkit-gradient(linear, left top, left bottom, color-stop(70%, #e96662), to(#f44538));
+  background: no-repeat left 0% top 40%/8% 17% linear-gradient(to bottom right, transparent, transparent, transparent, transparent 35%, #000 35%), no-repeat left 0% bottom 40%/8% 17% linear-gradient(to top right, transparent, transparent, transparent, transparent 35%, #000 35%), no-repeat left 0% top/21.5% 50% linear-gradient(to bottom right, transparent, transparent 45%, #e0ad96 45%), no-repeat left 0% bottom/21.5% 50% linear-gradient(to top right, transparent, transparent 45%, #b48b5e 45%, #e0ad96 75%), no-repeat left 88.5% bottom/1.5% 100% linear-gradient(#92c2d5 70%, #0c8da5), no-repeat left 87% bottom/1.5% 100% linear-gradient(#c16a91 70%, #860c51), no-repeat left 90% bottom/7% 100% linear-gradient(#d1d1d1 70%, #a9a9a9), no-repeat right 33% bottom/70% 100% linear-gradient(#ffeb00 70%, #dbb500), no-repeat right 0 bottom/11% 100% linear-gradient(#e96662 70%, #f44538);
+}
+
+@-webkit-keyframes move-marker {
+  /* MOVIMIENTO DEL LAPIZ */
+  14.28% {
+    -webkit-transform: translate(13%, 100%) rotate(2.5deg);
+            transform: translate(13%, 100%) rotate(2.5deg);
+  }
+  28.57% {
+    -webkit-transform: translate(23.4%, 0) rotate(-5deg);
+            transform: translate(23.4%, 0) rotate(-5deg);
+  }
+  42.85% {
+    -webkit-transform: translate(34.2%, 100%) rotate(2.5deg);
+            transform: translate(34.2%, 100%) rotate(2.5deg);
+  }
+  57.14% {
+    -webkit-transform: translate(45%, 0) rotate(-5deg);
+            transform: translate(45%, 0) rotate(-5deg);
+  }
+  71.42% {
+    -webkit-transform: translate(55.8%, 100%) rotate(2.5deg);
+            transform: translate(55.8%, 100%) rotate(2.5deg);
+  }
+  85.71% {
+    -webkit-transform: translate(66.6%, 0) rotate(-5deg);
+            transform: translate(66.6%, 0) rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: translate(77.4%, 100%) rotate(2.5deg);
+            transform: translate(77.4%, 100%) rotate(2.5deg);
+  }
+}
+
+@keyframes move-marker {
+  /* MOVIMIENTO DEL LAPIZ */
+  14.28% {
+    -webkit-transform: translate(13%, 100%) rotate(2.5deg);
+            transform: translate(13%, 100%) rotate(2.5deg);
+  }
+  28.57% {
+    -webkit-transform: translate(23.4%, 0) rotate(-5deg);
+            transform: translate(23.4%, 0) rotate(-5deg);
+  }
+  42.85% {
+    -webkit-transform: translate(34.2%, 100%) rotate(2.5deg);
+            transform: translate(34.2%, 100%) rotate(2.5deg);
+  }
+  57.14% {
+    -webkit-transform: translate(45%, 0) rotate(-5deg);
+            transform: translate(45%, 0) rotate(-5deg);
+  }
+  71.42% {
+    -webkit-transform: translate(55.8%, 100%) rotate(2.5deg);
+            transform: translate(55.8%, 100%) rotate(2.5deg);
+  }
+  85.71% {
+    -webkit-transform: translate(66.6%, 0) rotate(-5deg);
+            transform: translate(66.6%, 0) rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: translate(77.4%, 100%) rotate(2.5deg);
+            transform: translate(77.4%, 100%) rotate(2.5deg);
+  }
+}
+
+@-webkit-keyframes rainbow-fill {
+  /* COLORES TIEMPOS */
+  0% {
+    background: var(--bg-01-a), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  14.28% {
+    background: var(--bg-01-b), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  28.57% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  42.85% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  57.14% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  71.42% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-a), var(--bg-07-a);
+  }
+  85.71% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-a);
+  }
+  100% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-b);
+  }
+}
+
+@keyframes rainbow-fill {
+  /* COLORES TIEMPOS */
+  0% {
+    background: var(--bg-01-a), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  14.28% {
+    background: var(--bg-01-b), var(--bg-02-a), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  28.57% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-a), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  42.85% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-a), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  57.14% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-a), var(--bg-06-a), var(--bg-07-a);
+  }
+  71.42% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-a), var(--bg-07-a);
+  }
+  85.71% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-a);
+  }
+  100% {
+    background: var(--bg-01-b), var(--bg-02-b), var(--bg-03-b), var(--bg-04-b), var(--bg-05-b), var(--bg-06-b), var(--bg-07-b);
+  }
+}
+
+.modal-content {
+  background: radial-gradient(circle at 0% 50%, #fdf2c5 5%, #fff0f9 55%, #e4f8fc);
+  border: 1px solid #a00363;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 20px 0px black;
+          box-shadow: 5px 5px 20px 0px black;
+}
+
+.modal-content .modal-header-border {
+  border-bottom: 0;
+  padding: 0;
+}
+
+.modal-content .modal-proximamente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 30vh;
+  padding: 1rem 1rem 2rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.modal-content .modal-proximamente .modal-texto {
+  color: var(--color-crayon);
+  font-size: 1.5rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  letter-spacing: 1px;
+}
+
+.modal-backdrop {
+  opacity: 1;
+  filter: alpha(opacity=0);
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.footer {
+  padding: 5px 0;
+  background-color: #fdf2c5;
+  color: #4b4c4d;
+  background: radial-gradient(circle at 50% 0%, #fbea9e 5%, #fed7ef 55%, #b6edf7);
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 0 px;
+  margin: 10px 0;
+}
+
+.footer .social a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer .social a:hover {
+  opacity: 0.9;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
