@@ -77,22 +77,6 @@ renderizarListaDanza()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Vaciar Carrito
 const vaciarCarrito = () => {
     if (localStorage.getItem('carritoDeVestimenta')) {
