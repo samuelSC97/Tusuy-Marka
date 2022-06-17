@@ -658,4 +658,24 @@ body {
   margin-bottom: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+/* JAVA SCRIPT */
+
+
+
+.vestimentas-card {
+  border: 1px solid black;
+  box-shadow:
+  -3px 5px 10px -2px rgb(199, 22, 155),
+  5px 5px 10px -2px blue;
+  border-radius: 4%;
+  padding: 20px;
+}
+
+
+
+
