@@ -44,7 +44,9 @@ const renderizarDatosDanza = (e) => {        // .El hijo mas cercano/ .data-id
 //*cardLink.setAttribute('href', danzaSelected.url)  --> Para URL's
     cardImagen.setAttribute('src', danzaSelected.imagen)
     cardCTA.setAttribute('data-id', danzaSelected.id)
+
 }
+
 
 
 const agregarVestimenta = (e) => {
@@ -64,6 +66,7 @@ const agregarListenerBotones = () => {
 }
 
 
+console.log(carritoDeVestimenta.alquiler)
 
 
 // Event Listeners
@@ -73,17 +76,21 @@ cardCTA.addEventListener('click', agregarVestimenta)
 renderizarListaDanza()
 
 
-// Sumar total
-const totalCarrito = () => {
-    let sumaTotal = 0
-    carritoDeVestimenta.forEach((carritoDeVestimenta) => {
-        sumaTotal += carritoDeVestimenta.alquiler
-    }
-    )
-    return sumaTotal
-}
 
-console.log(totalCarrito())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Vaciar Carrito
