@@ -61,6 +61,7 @@ const agregarVestimenta = (e) => {
 }
 
 
+
 // Para sacar el ID y trabajar con ellos
 const agregarListenerBotones = () => {
     const danzaButton = document.querySelectorAll('.menuTab')
