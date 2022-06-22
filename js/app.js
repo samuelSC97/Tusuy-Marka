@@ -79,10 +79,13 @@ renderizarListaDanza()
 
 // Vaciar Carrito
 const vaciarCarrito = () => {
-    if (localStorage.getItem('carritoDeVestimenta')) {
-        localStorage.removeItem('carritoDeVestimenta')
-    }
+   
+    
     carritoDeVestimenta = []
+
+    //! Operador ternario
+    let carritoDeVestimenta = localStorage.removeItem('carritoDeVestimenta') || []
+
     imprimirCarrito()
 }
 
