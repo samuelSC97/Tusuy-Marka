@@ -20,10 +20,11 @@ const renderizarListaDanza = () => {
     danzas.forEach((danza) => {
 
         //! Desestructuración
-        const {nombre} = danza
+        const {nombre,id} = danza
+
         const danzaButton = document.createElement('button')
         danzaButton.className = 'menuTab'
-        danzaButton.setAttribute('data-id', danza.id)  //(Nombre del atributo,valor)
+        danzaButton.setAttribute('data-id', id)  //(Nombre del atributo,valor)
         danzaButton.innerHTML = `
             <span class="menuTabText">${nombre}</span>
         `
