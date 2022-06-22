@@ -18,11 +18,14 @@ const cardCTA = document.querySelector('.cardCTA')  // Boton
 // Creo una lista con los nombres
 const renderizarListaDanza = () => {
     danzas.forEach((danza) => {
+
+        
+        const {nombre} = danza
         const danzaButton = document.createElement('button')
         danzaButton.className = 'menuTab'
         danzaButton.setAttribute('data-id', danza.id)  //(Nombre del atributo,valor)
         danzaButton.innerHTML = `
-            <span class="menuTabText">${danza.nombre}</span>
+            <span class="menuTabText">${nombre}</span>
         `
         danzaListContainer.append(danzaButton)
     })
@@ -65,8 +68,8 @@ const agregarListenerBotones = () => {
     })
 }
 
-
-console.log(carritoDeVestimenta.alquiler)
+//! Condicional a objeto
+console.log(carritoDeVestimenta?.alquiler || 'Error, vuelva a cargar la pagina')
 
 
 // Event Listeners
@@ -80,7 +83,9 @@ renderizarListaDanza()
 // Vaciar Carrito
 const vaciarCarrito = () => {
    
-    
+    if (localStorage.getItem('carritoDeVestimenta')) {
+        carritoDeVestimenta = localStorage.removeItem('carritoDeVestimenta')
+    }
     carritoDeVestimenta = []
 
     //! Operador ternario
