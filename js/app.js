@@ -19,7 +19,7 @@ const cardCTA = document.querySelector('.cardCTA')  // Boton
 const renderizarListaDanza = () => {
     danzas.forEach((danza) => {
 
-        
+        //! Desestructuración
         const {nombre} = danza
         const danzaButton = document.createElement('button')
         danzaButton.className = 'menuTab'
