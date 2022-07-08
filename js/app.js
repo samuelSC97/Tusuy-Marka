@@ -124,7 +124,7 @@ vaciarCarritoBtn.addEventListener('click', vaciarCarrito)
 //!FETCH
 let dataDeApi
 
-fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+fetch('https://jsonplaceholder.typicode.com/posts/4')
     .then((response) => response.json())
     .then((data) => {
         dataDeApi = data
@@ -133,3 +133,4 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     .catch((error) => {
         console.log(error)
     })
+    
