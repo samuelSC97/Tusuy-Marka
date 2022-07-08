@@ -19,7 +19,6 @@ const cardCTA = document.querySelector('.cardCTA')  // Boton
 const renderizarListaDanza = () => {
     danzas.forEach((danza) => {
 
-        //! Desestructuración
         const {nombre,id} = danza
 
         const danzaButton = document.createElement('button')
@@ -70,7 +69,6 @@ const agregarListenerBotones = () => {
     })
 }
 
-//! Condicional a objeto
 console.log(carritoDeVestimenta?.alquiler || 'Error, vuelva a cargar la pagina')
 
 
@@ -84,17 +82,54 @@ renderizarListaDanza()
 
 // Vaciar Carrito
 const vaciarCarrito = () => {
+
+    let timerInterval
+    Swal.fire({
+    title: 'Auto close alert!',
+    html: 'I will close in <b></b> milliseconds.',
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+        b.textContent = Swal.getTimerLeft()
+        }, 100)
+    },
+    willClose: () => {
+        clearInterval(timerInterval)
+    }
+    }).then((result) => {
+    /* Read more about handling dismissals below */
+    if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+    }
+    })
    
     if (localStorage.getItem('carritoDeVestimenta')) {
         carritoDeVestimenta = localStorage.removeItem('carritoDeVestimenta')
     }
     carritoDeVestimenta = []
 
-    //! Operador ternario
     let carritoDeVestimenta = localStorage.removeItem('carritoDeVestimenta') || []
 
     imprimirCarrito()
+
+    
 }
 
 const vaciarCarritoBtn = document.querySelector('#vaciarCarrito')
 vaciarCarritoBtn.addEventListener('click', vaciarCarrito)
+
+//!FETCH
+let dataDeApi
+
+fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    .then((response) => response.json())
+    .then((data) => {
+        dataDeApi = data
+        console.log(dataDeApi)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
